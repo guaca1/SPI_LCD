@@ -1,0 +1,1223 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.38 build -256452561 
+                                                                                               Mon Nov 20 17:55:13 2017
+
+Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
+     1                           	processor	18F67J94
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    16                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    17                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    18  0000                     _RPINR12_13	set	3632
+    19  0000                     _RPOR22_23	set	3613
+    20  0000                     _RPOR24_25	set	3614
+    21  0000                     _SSP2BUF	set	3843
+    22  0000                     _SSP2CON1	set	3865
+    23  0000                     _SSP2CON3	set	3897
+    24  0000                     _SSP2STAT	set	3866
+    25  0000                     _SSP2STATbits	set	3866
+    26  0000                     _LATDbits	set	3980
+    27  0000                     _OSCCON	set	4051
+    28  0000                     _TRISCbits	set	3988
+    29  0000                     _TRISDbits	set	3989
+    30                           
+    31                           	psect	smallconst
+    32  000E00                     __psmallconst:
+    33                           	opt stack 0
+    34  000E00  00                 	db	0
+    35  000E01                     STR_1:
+    36                           
+    37                           ; BSR set to: 15
+    38  000E01  48                 	db	72	;'H'
+    39  000E02  65                 	db	101	;'e'
+    40  000E03  6C                 	db	108	;'l'
+    41  000E04  6C                 	db	108	;'l'
+    42  000E05  6F                 	db	111	;'o'
+    43  000E06  20                 	db	32
+    44  000E07  77                 	db	119	;'w'
+    45  000E08  6F                 	db	111	;'o'
+    46  000E09  72                 	db	114	;'r'
+    47  000E0A  6C                 	db	108	;'l'
+    48  000E0B  64                 	db	100	;'d'
+    49  000E0C  00                 	db	0
+    50                           
+    51                           ; #config settings
+    52  000E0D  00                 	db	0	; dummy byte at the end
+    53  0000                     
+    54                           	psect	cinit
+    55  00100C                     __pcinit:
+    56                           	opt stack 0
+    57  00100C                     start_initialization:
+    58                           	opt stack 0
+    59  00100C                     __initialization:
+    60                           	opt stack 0
+    61  00100C                     end_of_initialization:
+    62                           	opt stack 0
+    63  00100C                     __end_of__initialization:
+    64                           	opt stack 0
+    65  00100C  0E00               	movlw	low (__Lsmallconst shr (0+16))
+    66  00100E  6EF8               	movwf	tblptru,c
+    67  001010  0E0E               	movlw	high __Lsmallconst
+    68  001012  6EF7               	movwf	tblptrh,c
+    69  001014  0100               	movlb	0
+    70  001016  EF41  F007         	goto	_main	;jump to C main() function
+    71                           tblptru	equ	0xFF8
+    72                           tblptrh	equ	0xFF7
+    73                           
+    74                           	psect	cstackCOMRAM
+    75  000001                     __pcstackCOMRAM:
+    76                           	opt stack 0
+    77  000001                     spi_Send_Read@byte:
+    78                           	opt stack 0
+    79                           
+    80                           ; 1 bytes @ 0x0
+    81  000001                     	ds	1
+    82  000002                     readBusyFlag@retValue:
+    83                           	opt stack 0
+    84                           
+    85                           ; 1 bytes @ 0x1
+    86  000002                     	ds	1
+    87  000003                     ??_putchLCD:
+    88  000003                     displayCtrl@cursor:
+    89                           	opt stack 0
+    90                           
+    91                           ; 1 bytes @ 0x2
+    92  000003                     	ds	1
+    93  000004                     displayCtrl@blink:
+    94                           	opt stack 0
+    95                           
+    96                           ; 1 bytes @ 0x3
+    97  000004                     	ds	1
+    98  000005                     displayCtrl@display:
+    99                           	opt stack 0
+   100  000005                     putchLCD@input:
+   101                           	opt stack 0
+   102                           
+   103                           ; 1 bytes @ 0x4
+   104  000005                     	ds	1
+   105  000006                     displayCtrl@BCD:
+   106                           	opt stack 0
+   107  000006                     putStringLCD@input:
+   108                           	opt stack 0
+   109                           
+   110                           ; 2 bytes @ 0x5
+   111  000006                     	ds	2
+   112  000008                     ??_putStringLCD:
+   113                           
+   114                           ; 1 bytes @ 0x7
+   115  000008                     	ds	2
+   116  00000A                     putStringLCD@i:
+   117                           	opt stack 0
+   118                           
+   119                           ; 2 bytes @ 0x9
+   120  00000A                     	ds	2
+   121  00000C                     ??_main:
+   122                           
+   123                           ; 1 bytes @ 0xB
+   124  00000C                     	ds	1
+   125  00000D                     main@status:
+   126                           	opt stack 0
+   127                           
+   128                           ; 1 bytes @ 0xC
+   129  00000D                     	ds	1
+   130                           tblptru	equ	0xFF8
+   131                           tblptrh	equ	0xFF7
+   132                           
+   133 ;;
+   134 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   135 ;;
+   136 ;; *************** function _main *****************
+   137 ;; Defined at:
+   138 ;;		line 24 in file "main.c"
+   139 ;; Parameters:    Size  Location     Type
+   140 ;;		None
+   141 ;; Auto vars:     Size  Location     Type
+   142 ;;  data            5    0        unsigned char [5]
+   143 ;;  i               2    0        int 
+   144 ;;  status          1   12[COMRAM] unsigned char 
+   145 ;; Return value:  Size  Location     Type
+   146 ;;                  1    wreg      void 
+   147 ;; Registers used:
+   148 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   149 ;; Tracked objects:
+   150 ;;		On entry : 0/0
+   151 ;;		On exit  : 0/0
+   152 ;;		Unchanged: 0/0
+   153 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   154 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   155 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   156 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   157 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   158 ;;Total ram usage:        2 bytes
+   159 ;; Hardware stack levels required when called:    4
+   160 ;; This function calls:
+   161 ;;		_clearDisplay
+   162 ;;		_displayCtrl
+   163 ;;		_initialisation_SPI
+   164 ;;		_putStringLCD
+   165 ;;		_readBusyFlag
+   166 ;; This function is called by:
+   167 ;;		Startup code after reset
+   168 ;; This function uses a non-reentrant model
+   169 ;;
+   170                           
+   171                           	psect	text0
+   172  000E82                     __ptext0:
+   173                           	opt stack 0
+   174  000E82                     _main:
+   175                           	opt stack 27
+   176                           
+   177                           ;main.c: 26: unsigned char status = 0;
+   178                           
+   179                           ; BSR set to: 15
+   180                           ;incstack = 0
+   181  000E82  0E00               	movlw	0
+   182  000E84  6E0D               	movwf	main@status,c
+   183                           
+   184                           ;main.c: 27: unsigned char data[5];
+   185                           ;main.c: 28: int i;
+   186                           ;main.c: 31: OSCCON = OSCCON | 0b01110000;
+   187  000E86  50D3               	movf	4051,w,c	;volatile
+   188  000E88  0970               	iorlw	112
+   189  000E8A  6ED3               	movwf	4051,c	;volatile
+   190                           
+   191                           ;main.c: 33: initialisation_SPI();
+   192  000E8C  ECC0  F007         	call	_initialisation_SPI	;wreg free
+   193                           
+   194                           ;main.c: 37: TRISDbits.TRISD4 = 0;
+   195  000E90  9895               	bcf	3989,4,c	;volatile
+   196                           
+   197                           ;main.c: 38: TRISDbits.TRISD2 = 0;
+   198  000E92  9495               	bcf	3989,2,c	;volatile
+   199                           
+   200                           ;main.c: 39: TRISDbits.TRISD3 = 0;
+   201  000E94  9695               	bcf	3989,3,c	;volatile
+   202                           
+   203                           ;main.c: 40: TRISDbits.TRISD1 = 1;
+   204  000E96  8295               	bsf	3989,1,c	;volatile
+   205                           
+   206                           ;main.c: 41: TRISCbits.TRISC0 = 0;
+   207  000E98  9094               	bcf	3988,0,c	;volatile
+   208                           
+   209                           ;main.c: 42: LATDbits.LATD3 = 1;
+   210  000E9A  868C               	bsf	3980,3,c	;volatile
+   211                           
+   212                           ;main.c: 43: __nop();
+   213  000E9C  F000               	nop	
+   214                           
+   215                           ;main.c: 44: _delay((unsigned long)((33)*(8000000/4000.0)));
+   216  000E9E  0E56               	movlw	86
+   217  000EA0  6E0C               	movwf	??_main& (0+255),c
+   218  000EA2  0EB6               	movlw	182
+   219  000EA4                     u127:
+   220  000EA4  2EE8               	decfsz	wreg,f,c
+   221  000EA6  D7FE               	goto	u127
+   222  000EA8  2E0C               	decfsz	??_main& (0+255),f,c
+   223  000EAA  D7FC               	goto	u127
+   224                           
+   225                           ;main.c: 45: _delay((unsigned long)((33)*(8000000/4000.0)));
+   226  000EAC  0E56               	movlw	86
+   227  000EAE  6E0C               	movwf	??_main& (0+255),c
+   228  000EB0  0EB6               	movlw	182
+   229  000EB2                     u137:
+   230  000EB2  2EE8               	decfsz	wreg,f,c
+   231  000EB4  D7FE               	goto	u137
+   232  000EB6  2E0C               	decfsz	??_main& (0+255),f,c
+   233  000EB8  D7FC               	goto	u137
+   234                           
+   235                           ;main.c: 46: _delay((unsigned long)((33)*(8000000/4000.0)));
+   236  000EBA  0E56               	movlw	86
+   237  000EBC  6E0C               	movwf	??_main& (0+255),c
+   238  000EBE  0EB6               	movlw	182
+   239  000EC0                     u147:
+   240  000EC0  2EE8               	decfsz	wreg,f,c
+   241  000EC2  D7FE               	goto	u147
+   242  000EC4  2E0C               	decfsz	??_main& (0+255),f,c
+   243  000EC6  D7FC               	goto	u147
+   244  000EC8                     l872:
+   245  000EC8  ECF0  F007         	call	_readBusyFlag	;wreg free
+   246  000ECC  0900               	iorlw	0
+   247  000ECE  A4D8               	btfss	status,2,c
+   248  000ED0  D7FB               	goto	l872
+   249                           
+   250                           ;main.c: 49: clearDisplay();
+   251  000ED2  ECDF  F007         	call	_clearDisplay	;wreg free
+   252                           
+   253                           ;main.c: 50: displayCtrl(1,1,0);
+   254  000ED6  0E01               	movlw	1
+   255  000ED8  6E03               	movwf	displayCtrl@cursor,c
+   256  000EDA  0E00               	movlw	0
+   257  000EDC  6E04               	movwf	displayCtrl@blink,c
+   258  000EDE  0E01               	movlw	1
+   259  000EE0  EC9E  F007         	call	_displayCtrl
+   260                           
+   261                           ;main.c: 51: putStringLCD("Hello world");
+   262  000EE4  0E01               	movlw	low STR_1
+   263  000EE6  6E06               	movwf	putStringLCD@input,c
+   264  000EE8  0E0E               	movlw	high STR_1
+   265  000EEA  6E07               	movwf	putStringLCD@input+1,c
+   266  000EEC  EC79  F007         	call	_putStringLCD	;wreg free
+   267  000EF0                     l46:
+   268                           
+   269                           ;main.c: 53: {
+   270  000EF0  D7FF               	goto	l46
+   271  000EF2                     __end_of_main:
+   272                           	opt stack 0
+   273                           tblptru	equ	0xFF8
+   274                           tblptrh	equ	0xFF7
+   275                           wreg	equ	0xFE8
+   276                           status	equ	0xFD8
+   277                           
+   278 ;; *************** function _putStringLCD *****************
+   279 ;; Defined at:
+   280 ;;		line 96 in file "main.c"
+   281 ;; Parameters:    Size  Location     Type
+   282 ;;  input           2    5[COMRAM] PTR unsigned char 
+   283 ;;		 -> STR_1(12), 
+   284 ;; Auto vars:     Size  Location     Type
+   285 ;;  i               2    9[COMRAM] int 
+   286 ;; Return value:  Size  Location     Type
+   287 ;;                  1    wreg      void 
+   288 ;; Registers used:
+   289 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   290 ;; Tracked objects:
+   291 ;;		On entry : 0/0
+   292 ;;		On exit  : 0/0
+   293 ;;		Unchanged: 0/0
+   294 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   295 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   296 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   297 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   298 ;;      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   299 ;;Total ram usage:        6 bytes
+   300 ;; Hardware stack levels used:    1
+   301 ;; Hardware stack levels required when called:    3
+   302 ;; This function calls:
+   303 ;;		_putchLCD
+   304 ;; This function is called by:
+   305 ;;		_main
+   306 ;; This function uses a non-reentrant model
+   307 ;;
+   308                           
+   309                           	psect	text1
+   310  000EF2                     __ptext1:
+   311                           	opt stack 0
+   312  000EF2                     _putStringLCD:
+   313                           	opt stack 27
+   314                           
+   315                           ;main.c: 98: int i;
+   316                           ;main.c: 99: for (i = 0; input[i] != '\0'; i++)
+   317                           
+   318                           ;incstack = 0
+   319  000EF2  0E00               	movlw	0
+   320  000EF4  6E0B               	movwf	putStringLCD@i+1,c
+   321  000EF6  0E00               	movlw	0
+   322  000EF8  6E0A               	movwf	putStringLCD@i,c
+   323  000EFA  D010               	goto	l844
+   324  000EFC                     l840:
+   325                           
+   326                           ;main.c: 100: {
+   327                           ;main.c: 101: putchLCD(input[i]);
+   328  000EFC  500A               	movf	putStringLCD@i,w,c
+   329  000EFE  2406               	addwf	putStringLCD@input,w,c
+   330  000F00  6E08               	movwf	??_putStringLCD& (0+255),c
+   331  000F02  500B               	movf	putStringLCD@i+1,w,c
+   332  000F04  2007               	addwfc	putStringLCD@input+1,w,c
+   333  000F06  6E09               	movwf	(??_putStringLCD+1)& (0+255),c
+   334  000F08  C008  FFF6         	movff	??_putStringLCD,tblptrl
+   335  000F0C  C009  FFF7         	movff	??_putStringLCD+1,tblptrh
+   336  000F10                     	if	0	;tblptru may be non-zero
+   337  000F10                     	endif
+   338  000F10                     	if	0	;tblptru may be non-zero
+   339  000F10                     	endif
+   340  000F10  0008               	tblrd		*
+   341  000F12  50F5               	movf	tablat,w,c
+   342  000F14  EC07  F007         	call	_putchLCD
+   343  000F18  4A0A               	infsnz	putStringLCD@i,f,c
+   344  000F1A  2A0B               	incf	putStringLCD@i+1,f,c
+   345  000F1C                     l844:
+   346  000F1C  500A               	movf	putStringLCD@i,w,c
+   347  000F1E  2406               	addwf	putStringLCD@input,w,c
+   348  000F20  6E08               	movwf	??_putStringLCD& (0+255),c
+   349  000F22  500B               	movf	putStringLCD@i+1,w,c
+   350  000F24  2007               	addwfc	putStringLCD@input+1,w,c
+   351  000F26  6E09               	movwf	(??_putStringLCD+1)& (0+255),c
+   352  000F28  C008  FFF6         	movff	??_putStringLCD,tblptrl
+   353  000F2C  C009  FFF7         	movff	??_putStringLCD+1,tblptrh
+   354  000F30                     	if	0	;tblptru may be non-zero
+   355  000F30                     	endif
+   356  000F30                     	if	0	;tblptru may be non-zero
+   357  000F30                     	endif
+   358  000F30  0008               	tblrd		*
+   359  000F32  50F5               	movf	tablat,w,c
+   360  000F34  0900               	iorlw	0
+   361  000F36  B4D8               	btfsc	status,2,c
+   362  000F38  0012               	return	
+   363  000F3A  D7E0               	goto	l840
+   364  000F3C                     __end_of_putStringLCD:
+   365                           	opt stack 0
+   366                           tblptru	equ	0xFF8
+   367                           tblptrh	equ	0xFF7
+   368                           tblptrl	equ	0xFF6
+   369                           tablat	equ	0xFF5
+   370                           wreg	equ	0xFE8
+   371                           status	equ	0xFD8
+   372                           
+   373 ;; *************** function _putchLCD *****************
+   374 ;; Defined at:
+   375 ;;		line 105 in file "main.c"
+   376 ;; Parameters:    Size  Location     Type
+   377 ;;  input           1    wreg     unsigned char 
+   378 ;; Auto vars:     Size  Location     Type
+   379 ;;  input           1    4[COMRAM] unsigned char 
+   380 ;; Return value:  Size  Location     Type
+   381 ;;                  1    wreg      void 
+   382 ;; Registers used:
+   383 ;;		wreg, status,2, status,0, cstack
+   384 ;; Tracked objects:
+   385 ;;		On entry : 0/0
+   386 ;;		On exit  : 0/0
+   387 ;;		Unchanged: 0/0
+   388 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   389 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   390 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   391 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   392 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   393 ;;Total ram usage:        3 bytes
+   394 ;; Hardware stack levels used:    1
+   395 ;; Hardware stack levels required when called:    2
+   396 ;; This function calls:
+   397 ;;		_readBusyFlag
+   398 ;;		_spi_Send_Read
+   399 ;; This function is called by:
+   400 ;;		_putStringLCD
+   401 ;; This function uses a non-reentrant model
+   402 ;;
+   403                           
+   404                           	psect	text2
+   405  000E0E                     __ptext2:
+   406                           	opt stack 0
+   407  000E0E                     _putchLCD:
+   408                           	opt stack 27
+   409                           
+   410                           ;incstack = 0
+   411                           ;putchLCD@input stored from wreg
+   412  000E0E  6E05               	movwf	putchLCD@input,c
+   413                           
+   414                           ;main.c: 107: input = (input & 0xF0) >> 4 | (input & 0x0F) << 4;
+   415  000E10  C005  F003         	movff	putchLCD@input,??_putchLCD
+   416  000E14  0E0F               	movlw	15
+   417  000E16  1603               	andwf	??_putchLCD,f,c
+   418  000E18  3A03               	swapf	??_putchLCD,f,c
+   419  000E1A  0EF0               	movlw	240
+   420  000E1C  1603               	andwf	??_putchLCD,f,c
+   421  000E1E  3805               	swapf	putchLCD@input,w,c
+   422  000E20  0B0F               	andlw	15
+   423  000E22  0B0F               	andlw	15
+   424  000E24  1003               	iorwf	??_putchLCD,w,c
+   425  000E26  6E05               	movwf	putchLCD@input,c
+   426                           
+   427                           ;main.c: 108: input = (input & 0xCC) >> 2 | (input & 0x33) << 2;
+   428  000E28  C005  F003         	movff	putchLCD@input,??_putchLCD
+   429  000E2C  0E33               	movlw	51
+   430  000E2E  1603               	andwf	??_putchLCD,f,c
+   431  000E30  90D8               	bcf	status,0,c
+   432  000E32  3603               	rlcf	??_putchLCD,f,c
+   433  000E34  90D8               	bcf	status,0,c
+   434  000E36  3603               	rlcf	??_putchLCD,f,c
+   435  000E38  4005               	rrncf	putchLCD@input,w,c
+   436  000E3A  42E8               	rrncf	wreg,f,c
+   437  000E3C  0B3F               	andlw	63
+   438  000E3E  0B33               	andlw	51
+   439  000E40  1003               	iorwf	??_putchLCD,w,c
+   440  000E42  6E05               	movwf	putchLCD@input,c
+   441                           
+   442                           ;main.c: 109: input = (input & 0xAA) >> 1 | (input & 0x55) << 1;
+   443  000E44  C005  F003         	movff	putchLCD@input,??_putchLCD
+   444  000E48  0E55               	movlw	85
+   445  000E4A  1603               	andwf	??_putchLCD,f,c
+   446  000E4C  90D8               	bcf	status,0,c
+   447  000E4E  3403               	rlcf	??_putchLCD,w,c
+   448  000E50  6E04               	movwf	(??_putchLCD+1)& (0+255),c
+   449  000E52  90D8               	bcf	status,0,c
+   450  000E54  3005               	rrcf	putchLCD@input,w,c
+   451  000E56  0B55               	andlw	85
+   452  000E58  1004               	iorwf	??_putchLCD+1,w,c
+   453  000E5A  6E05               	movwf	putchLCD@input,c
+   454  000E5C                     l720:
+   455  000E5C  ECF0  F007         	call	_readBusyFlag	;wreg free
+   456  000E60  0900               	iorlw	0
+   457  000E62  A4D8               	btfss	status,2,c
+   458  000E64  D7FB               	goto	l720
+   459                           
+   460                           ;main.c: 112: LATDbits.LATD3 = 0;
+   461  000E66  968C               	bcf	3980,3,c	;volatile
+   462                           
+   463                           ;main.c: 113: spi_Send_Read(0xFA);
+   464  000E68  0EFA               	movlw	250
+   465  000E6A  ECFD  F007         	call	_spi_Send_Read
+   466                           
+   467                           ;main.c: 114: spi_Send_Read(input & 0xF0);
+   468  000E6E  5005               	movf	putchLCD@input,w,c
+   469  000E70  0BF0               	andlw	240
+   470  000E72  ECFD  F007         	call	_spi_Send_Read
+   471                           
+   472                           ;main.c: 115: spi_Send_Read(input << 4);
+   473  000E76  3805               	swapf	putchLCD@input,w,c
+   474  000E78  0BF0               	andlw	240
+   475  000E7A  ECFD  F007         	call	_spi_Send_Read
+   476                           
+   477                           ;main.c: 116: LATDbits.LATD3 = 1;
+   478  000E7E  868C               	bsf	3980,3,c	;volatile
+   479  000E80  0012               	return		;funcret
+   480  000E82                     __end_of_putchLCD:
+   481                           	opt stack 0
+   482                           tblptru	equ	0xFF8
+   483                           tblptrh	equ	0xFF7
+   484                           tblptrl	equ	0xFF6
+   485                           tablat	equ	0xFF5
+   486                           wreg	equ	0xFE8
+   487                           status	equ	0xFD8
+   488                           
+   489 ;; *************** function _initialisation_SPI *****************
+   490 ;; Defined at:
+   491 ;;		line 139 in file "main.c"
+   492 ;; Parameters:    Size  Location     Type
+   493 ;;		None
+   494 ;; Auto vars:     Size  Location     Type
+   495 ;;		None
+   496 ;; Return value:  Size  Location     Type
+   497 ;;                  1    wreg      void 
+   498 ;; Registers used:
+   499 ;;		wreg, status,2, status,0
+   500 ;; Tracked objects:
+   501 ;;		On entry : 0/0
+   502 ;;		On exit  : 0/0
+   503 ;;		Unchanged: 0/0
+   504 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   505 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   506 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   507 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   508 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   509 ;;Total ram usage:        0 bytes
+   510 ;; Hardware stack levels used:    1
+   511 ;; This function calls:
+   512 ;;		Nothing
+   513 ;; This function is called by:
+   514 ;;		_main
+   515 ;; This function uses a non-reentrant model
+   516 ;;
+   517                           
+   518                           	psect	text3
+   519  000F80                     __ptext3:
+   520                           	opt stack 0
+   521  000F80                     _initialisation_SPI:
+   522                           	opt stack 30
+   523                           
+   524                           ;main.c: 143: RPOR24_25 |= 0x04;
+   525                           
+   526                           ;incstack = 0
+   527  000F80  010E               	movlb	14	; () banked
+   528  000F82  851E               	bsf	30,2,b	;volatile
+   529                           
+   530                           ; BSR set to: 14
+   531                           ;main.c: 144: RPOR24_25 &= 0xF4;
+   532  000F84  0EF4               	movlw	244
+   533  000F86  010E               	movlb	14	; () banked
+   534  000F88  171E               	andwf	30,f,b	;volatile
+   535                           
+   536                           ; BSR set to: 14
+   537                           ;main.c: 146: RPOR22_23 |= 0x05;
+   538  000F8A  0E05               	movlw	5
+   539  000F8C  010E               	movlb	14	; () banked
+   540  000F8E  131D               	iorwf	29,f,b	;volatile
+   541                           
+   542                           ; BSR set to: 14
+   543                           ;main.c: 147: RPOR22_23 &= 0xF5;
+   544  000F90  0EF5               	movlw	245
+   545  000F92  010E               	movlb	14	; () banked
+   546  000F94  171D               	andwf	29,f,b	;volatile
+   547                           
+   548                           ; BSR set to: 14
+   549                           ;main.c: 149: RPINR12_13 |= 0x50;
+   550  000F96  0E50               	movlw	80
+   551  000F98  010E               	movlb	14	; () banked
+   552  000F9A  1330               	iorwf	48,f,b	;volatile
+   553                           
+   554                           ; BSR set to: 14
+   555                           ;main.c: 150: RPINR12_13 &= 0x5F;
+   556  000F9C  0E5F               	movlw	95
+   557  000F9E  010E               	movlb	14	; () banked
+   558  000FA0  1730               	andwf	48,f,b	;volatile
+   559                           
+   560                           ; BSR set to: 14
+   561                           ;main.c: 153: SSP2CON1 &= 0xF1;
+   562  000FA2  0EF1               	movlw	241
+   563  000FA4  010F               	movlb	15	; () banked
+   564  000FA6  1719               	andwf	25,f,b	;volatile
+   565                           
+   566                           ; BSR set to: 15
+   567                           ;main.c: 154: SSP2CON1 |= 0x31;
+   568  000FA8  0E31               	movlw	49
+   569  000FAA  010F               	movlb	15	; () banked
+   570  000FAC  1319               	iorwf	25,f,b	;volatile
+   571                           
+   572                           ; BSR set to: 15
+   573                           ;main.c: 155: SSP2STAT |= 0x80;
+   574  000FAE  010F               	movlb	15	; () banked
+   575  000FB0  8F1A               	bsf	26,7,b	;volatile
+   576                           
+   577                           ; BSR set to: 15
+   578                           ;main.c: 156: SSP2STAT &= ~0x40;
+   579  000FB2  010F               	movlb	15	; () banked
+   580  000FB4  9D1A               	bcf	26,6,b	;volatile
+   581                           
+   582                           ; BSR set to: 15
+   583                           ;main.c: 157: SSP2CON3 &= 0x8F;
+   584  000FB6  0E8F               	movlw	143
+   585  000FB8  010F               	movlb	15	; () banked
+   586  000FBA  1739               	andwf	57,f,b	;volatile
+   587                           
+   588                           ; BSR set to: 15
+   589  000FBC  0012               	return		;funcret
+   590  000FBE                     __end_of_initialisation_SPI:
+   591                           	opt stack 0
+   592                           tblptru	equ	0xFF8
+   593                           tblptrh	equ	0xFF7
+   594                           tblptrl	equ	0xFF6
+   595                           tablat	equ	0xFF5
+   596                           wreg	equ	0xFE8
+   597                           status	equ	0xFD8
+   598                           
+   599 ;; *************** function _displayCtrl *****************
+   600 ;; Defined at:
+   601 ;;		line 78 in file "main.c"
+   602 ;; Parameters:    Size  Location     Type
+   603 ;;  display         1    wreg     unsigned char 
+   604 ;;  cursor          1    2[COMRAM] unsigned char 
+   605 ;;  blink           1    3[COMRAM] unsigned char 
+   606 ;; Auto vars:     Size  Location     Type
+   607 ;;  display         1    4[COMRAM] unsigned char 
+   608 ;;  BCD             1    5[COMRAM] unsigned char 
+   609 ;; Return value:  Size  Location     Type
+   610 ;;                  1    wreg      void 
+   611 ;; Registers used:
+   612 ;;		wreg, status,2, status,0, cstack
+   613 ;; Tracked objects:
+   614 ;;		On entry : 0/0
+   615 ;;		On exit  : 0/0
+   616 ;;		Unchanged: 0/0
+   617 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   618 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   619 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   620 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   621 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   622 ;;Total ram usage:        4 bytes
+   623 ;; Hardware stack levels used:    1
+   624 ;; Hardware stack levels required when called:    2
+   625 ;; This function calls:
+   626 ;;		_readBusyFlag
+   627 ;;		_spi_Send_Read
+   628 ;; This function is called by:
+   629 ;;		_main
+   630 ;; This function uses a non-reentrant model
+   631 ;;
+   632                           
+   633                           	psect	text4
+   634  000F3C                     __ptext4:
+   635                           	opt stack 0
+   636  000F3C                     _displayCtrl:
+   637                           	opt stack 28
+   638                           
+   639                           ; BSR set to: 15
+   640                           ;incstack = 0
+   641                           ;displayCtrl@display stored from wreg
+   642  000F3C  6E05               	movwf	displayCtrl@display,c
+   643                           
+   644                           ;main.c: 80: char BCD = blink;
+   645  000F3E  C004  F006         	movff	displayCtrl@blink,displayCtrl@BCD
+   646                           
+   647                           ;main.c: 81: BCD <<= 1;
+   648  000F42  90D8               	bcf	status,0,c
+   649  000F44  3606               	rlcf	displayCtrl@BCD,f,c
+   650                           
+   651                           ;main.c: 82: BCD += cursor;
+   652  000F46  5003               	movf	displayCtrl@cursor,w,c
+   653  000F48  2606               	addwf	displayCtrl@BCD,f,c
+   654                           
+   655                           ;main.c: 83: BCD <<= 1;
+   656  000F4A  90D8               	bcf	status,0,c
+   657  000F4C  3606               	rlcf	displayCtrl@BCD,f,c
+   658                           
+   659                           ;main.c: 84: BCD += display;
+   660  000F4E  5005               	movf	displayCtrl@display,w,c
+   661  000F50  2606               	addwf	displayCtrl@BCD,f,c
+   662                           
+   663                           ;main.c: 85: BCD <<= 1;
+   664  000F52  90D8               	bcf	status,0,c
+   665  000F54  3606               	rlcf	displayCtrl@BCD,f,c
+   666                           
+   667                           ;main.c: 86: BCD += 1;
+   668  000F56  2A06               	incf	displayCtrl@BCD,f,c
+   669                           
+   670                           ;main.c: 87: BCD <<= 4;
+   671  000F58  3A06               	swapf	displayCtrl@BCD,f,c
+   672  000F5A  0EF0               	movlw	240
+   673  000F5C  1606               	andwf	displayCtrl@BCD,f,c
+   674  000F5E                     l832:
+   675  000F5E  ECF0  F007         	call	_readBusyFlag	;wreg free
+   676  000F62  0900               	iorlw	0
+   677  000F64  A4D8               	btfss	status,2,c
+   678  000F66  D7FB               	goto	l832
+   679                           
+   680                           ;main.c: 90: LATDbits.LATD3 = 0;
+   681  000F68  968C               	bcf	3980,3,c	;volatile
+   682                           
+   683                           ;main.c: 91: spi_Send_Read(0xF8);
+   684  000F6A  0EF8               	movlw	248
+   685  000F6C  ECFD  F007         	call	_spi_Send_Read
+   686                           
+   687                           ;main.c: 92: spi_Send_Read(BCD);
+   688  000F70  5006               	movf	displayCtrl@BCD,w,c
+   689  000F72  ECFD  F007         	call	_spi_Send_Read
+   690                           
+   691                           ;main.c: 93: spi_Send_Read(0x00);
+   692  000F76  0E00               	movlw	0
+   693  000F78  ECFD  F007         	call	_spi_Send_Read
+   694                           
+   695                           ;main.c: 94: LATDbits.LATD3 = 1;
+   696  000F7C  868C               	bsf	3980,3,c	;volatile
+   697  000F7E  0012               	return		;funcret
+   698  000F80                     __end_of_displayCtrl:
+   699                           	opt stack 0
+   700                           tblptru	equ	0xFF8
+   701                           tblptrh	equ	0xFF7
+   702                           tblptrl	equ	0xFF6
+   703                           tablat	equ	0xFF5
+   704                           wreg	equ	0xFE8
+   705                           status	equ	0xFD8
+   706                           
+   707 ;; *************** function _clearDisplay *****************
+   708 ;; Defined at:
+   709 ;;		line 66 in file "main.c"
+   710 ;; Parameters:    Size  Location     Type
+   711 ;;		None
+   712 ;; Auto vars:     Size  Location     Type
+   713 ;;		None
+   714 ;; Return value:  Size  Location     Type
+   715 ;;                  1    wreg      void 
+   716 ;; Registers used:
+   717 ;;		wreg, status,2, status,0, cstack
+   718 ;; Tracked objects:
+   719 ;;		On entry : 0/0
+   720 ;;		On exit  : 0/0
+   721 ;;		Unchanged: 0/0
+   722 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   723 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   724 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   725 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   726 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   727 ;;Total ram usage:        0 bytes
+   728 ;; Hardware stack levels used:    1
+   729 ;; Hardware stack levels required when called:    2
+   730 ;; This function calls:
+   731 ;;		_readBusyFlag
+   732 ;;		_spi_Send_Read
+   733 ;; This function is called by:
+   734 ;;		_main
+   735 ;; This function uses a non-reentrant model
+   736 ;;
+   737                           
+   738                           	psect	text5
+   739  000FBE                     __ptext5:
+   740                           	opt stack 0
+   741  000FBE                     _clearDisplay:
+   742                           	opt stack 28
+   743  000FBE                     l754:
+   744  000FBE  ECF0  F007         	call	_readBusyFlag	;wreg free
+   745  000FC2  0900               	iorlw	0
+   746  000FC4  A4D8               	btfss	status,2,c
+   747  000FC6  D7FB               	goto	l754
+   748                           
+   749                           ;main.c: 70: LATDbits.LATD3 = 0;
+   750  000FC8  968C               	bcf	3980,3,c	;volatile
+   751                           
+   752                           ;main.c: 71: spi_Send_Read(0xF8);
+   753  000FCA  0EF8               	movlw	248
+   754  000FCC  ECFD  F007         	call	_spi_Send_Read
+   755                           
+   756                           ;main.c: 72: spi_Send_Read(0x80);
+   757  000FD0  0E80               	movlw	128
+   758  000FD2  ECFD  F007         	call	_spi_Send_Read
+   759                           
+   760                           ;main.c: 73: spi_Send_Read(0x00);
+   761  000FD6  0E00               	movlw	0
+   762  000FD8  ECFD  F007         	call	_spi_Send_Read
+   763                           
+   764                           ;main.c: 74: LATDbits.LATD3 = 1;
+   765  000FDC  868C               	bsf	3980,3,c	;volatile
+   766  000FDE  0012               	return		;funcret
+   767  000FE0                     __end_of_clearDisplay:
+   768                           	opt stack 0
+   769                           tblptru	equ	0xFF8
+   770                           tblptrh	equ	0xFF7
+   771                           tblptrl	equ	0xFF6
+   772                           tablat	equ	0xFF5
+   773                           wreg	equ	0xFE8
+   774                           status	equ	0xFD8
+   775                           
+   776 ;; *************** function _readBusyFlag *****************
+   777 ;; Defined at:
+   778 ;;		line 120 in file "main.c"
+   779 ;; Parameters:    Size  Location     Type
+   780 ;;		None
+   781 ;; Auto vars:     Size  Location     Type
+   782 ;;  retValue        1    1[COMRAM] unsigned char 
+   783 ;; Return value:  Size  Location     Type
+   784 ;;                  1    wreg      unsigned char 
+   785 ;; Registers used:
+   786 ;;		wreg, status,2, status,0, cstack
+   787 ;; Tracked objects:
+   788 ;;		On entry : 0/0
+   789 ;;		On exit  : 0/0
+   790 ;;		Unchanged: 0/0
+   791 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   792 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   793 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   794 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   795 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   796 ;;Total ram usage:        1 bytes
+   797 ;; Hardware stack levels used:    1
+   798 ;; Hardware stack levels required when called:    1
+   799 ;; This function calls:
+   800 ;;		_spi_Send_Read
+   801 ;; This function is called by:
+   802 ;;		_main
+   803 ;;		_clearDisplay
+   804 ;;		_displayCtrl
+   805 ;;		_putchLCD
+   806 ;; This function uses a non-reentrant model
+   807 ;;
+   808                           
+   809                           	psect	text6
+   810  000FE0                     __ptext6:
+   811                           	opt stack 0
+   812  000FE0                     _readBusyFlag:
+   813                           	opt stack 29
+   814                           
+   815                           ;main.c: 122: unsigned char retValue;
+   816                           ;main.c: 124: LATDbits.LATD3 = 0;
+   817                           
+   818                           ;incstack = 0
+   819  000FE0  968C               	bcf	3980,3,c	;volatile
+   820                           
+   821                           ;main.c: 125: spi_Send_Read(0xFC);
+   822  000FE2  0EFC               	movlw	252
+   823  000FE4  ECFD  F007         	call	_spi_Send_Read
+   824                           
+   825                           ;main.c: 126: retValue = spi_Send_Read(0x00);
+   826  000FE8  0E00               	movlw	0
+   827  000FEA  ECFD  F007         	call	_spi_Send_Read
+   828  000FEE  6E02               	movwf	readBusyFlag@retValue,c
+   829                           
+   830                           ;main.c: 127: LATDbits.LATD3 = 1;
+   831  000FF0  868C               	bsf	3980,3,c	;volatile
+   832                           
+   833                           ;main.c: 128: _delay((unsigned long)((1)*(8000000/4000000.0)));
+   834  000FF2  D000               	nop2		;2 cycle nop
+   835                           
+   836                           ;main.c: 129: return retValue & 1;
+   837  000FF4  5002               	movf	readBusyFlag@retValue,w,c
+   838  000FF6  0B01               	andlw	1
+   839  000FF8  0012               	return	
+   840  000FFA                     __end_of_readBusyFlag:
+   841                           	opt stack 0
+   842                           tblptru	equ	0xFF8
+   843                           tblptrh	equ	0xFF7
+   844                           tblptrl	equ	0xFF6
+   845                           tablat	equ	0xFF5
+   846                           wreg	equ	0xFE8
+   847                           status	equ	0xFD8
+   848                           
+   849 ;; *************** function _spi_Send_Read *****************
+   850 ;; Defined at:
+   851 ;;		line 59 in file "main.c"
+   852 ;; Parameters:    Size  Location     Type
+   853 ;;  byte            1    wreg     unsigned char 
+   854 ;; Auto vars:     Size  Location     Type
+   855 ;;  byte            1    0[COMRAM] unsigned char 
+   856 ;; Return value:  Size  Location     Type
+   857 ;;                  1    wreg      unsigned char 
+   858 ;; Registers used:
+   859 ;;		wreg, status,2
+   860 ;; Tracked objects:
+   861 ;;		On entry : 0/0
+   862 ;;		On exit  : 0/0
+   863 ;;		Unchanged: 0/0
+   864 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13
+   865 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   866 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   867 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   868 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0
+   869 ;;Total ram usage:        1 bytes
+   870 ;; Hardware stack levels used:    1
+   871 ;; This function calls:
+   872 ;;		Nothing
+   873 ;; This function is called by:
+   874 ;;		_clearDisplay
+   875 ;;		_displayCtrl
+   876 ;;		_putchLCD
+   877 ;;		_readBusyFlag
+   878 ;; This function uses a non-reentrant model
+   879 ;;
+   880                           
+   881                           	psect	text7
+   882  000FFA                     __ptext7:
+   883                           	opt stack 0
+   884  000FFA                     _spi_Send_Read:
+   885                           	opt stack 29
+   886                           
+   887                           ;incstack = 0
+   888                           ;spi_Send_Read@byte stored from wreg
+   889  000FFA  6E01               	movwf	spi_Send_Read@byte,c
+   890                           
+   891                           ;main.c: 61: SSP2BUF = byte;
+   892  000FFC  C001  FF03         	movff	spi_Send_Read@byte,3843	;volatile
+   893  001000                     l52:
+   894  001000  010F               	movlb	15	; () banked
+   895  001002  A11A               	btfss	26,0,b	;volatile
+   896  001004  D7FD               	goto	l52
+   897                           
+   898                           ; BSR set to: 15
+   899                           ;main.c: 63: return SSP2BUF;
+   900  001006  010F               	movlb	15	; () banked
+   901  001008  5103               	movf	3,w,b	;volatile
+   902                           
+   903                           ; BSR set to: 15
+   904  00100A  0012               	return		;funcret
+   905  00100C                     __end_of_spi_Send_Read:
+   906                           	opt stack 0
+   907                           tblptru	equ	0xFF8
+   908                           tblptrh	equ	0xFF7
+   909                           tblptrl	equ	0xFF6
+   910                           tablat	equ	0xFF5
+   911                           wreg	equ	0xFE8
+   912                           status	equ	0xFD8
+   913                           tblptru	equ	0xFF8
+   914                           tblptrh	equ	0xFF7
+   915                           tblptrl	equ	0xFF6
+   916                           tablat	equ	0xFF5
+   917                           wreg	equ	0xFE8
+   918                           status	equ	0xFD8
+   919                           
+   920                           	psect	rparam
+   921  0000                     tblptru	equ	0xFF8
+   922                           tblptrh	equ	0xFF7
+   923                           tblptrl	equ	0xFF6
+   924                           tablat	equ	0xFF5
+   925                           wreg	equ	0xFE8
+   926                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     12
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     13      13
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          250      0       0
+
+Pointer List with Targets:
+
+    putStringLCD@input	PTR unsigned char  size(2) Largest target is 12
+		 -> STR_1(CODE[12]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_putStringLCD
+    _putStringLCD->_putchLCD
+    _putchLCD->_readBusyFlag
+    _displayCtrl->_readBusyFlag
+    _clearDisplay->_readBusyFlag
+    _readBusyFlag->_spi_Send_Read
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 9     9      0     664
+                                             11 COMRAM     2     2      0
+                       _clearDisplay
+                        _displayCtrl
+                 _initialisation_SPI
+                       _putStringLCD
+                       _readBusyFlag
+ ---------------------------------------------------------------------------------
+ (1) _putStringLCD                                         6     4      2     319
+                                              5 COMRAM     6     4      2
+                           _putchLCD
+ ---------------------------------------------------------------------------------
+ (2) _putchLCD                                             3     3      0     165
+                                              2 COMRAM     3     3      0
+                       _readBusyFlag
+                      _spi_Send_Read
+ ---------------------------------------------------------------------------------
+ (1) _initialisation_SPI                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _displayCtrl                                          4     2      2     269
+                                              2 COMRAM     4     2      2
+                       _readBusyFlag
+                      _spi_Send_Read
+ ---------------------------------------------------------------------------------
+ (1) _clearDisplay                                         0     0      0      45
+                       _readBusyFlag
+                      _spi_Send_Read
+ ---------------------------------------------------------------------------------
+ (1) _readBusyFlag                                         1     1      0      30
+                                              1 COMRAM     1     1      0
+                      _spi_Send_Read
+ ---------------------------------------------------------------------------------
+ (2) _spi_Send_Read                                        1     1      0      15
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _clearDisplay
+     _readBusyFlag
+       _spi_Send_Read
+     _spi_Send_Read
+   _displayCtrl
+     _readBusyFlag
+       _spi_Send_Read
+     _spi_Send_Read
+   _initialisation_SPI
+   _putStringLCD
+     _putchLCD
+       _readBusyFlag
+         _spi_Send_Read
+       _spi_Send_Read
+   _readBusyFlag
+     _spi_Send_Read
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      D       D       1       13.7%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+ABS                  0      0       0       8        0.0%
+BITBANK2           100      0       0       9        0.0%
+BANK2              100      0       0      10        0.0%
+BITBANK3           100      0       0      11        0.0%
+BANK3              100      0       0      12        0.0%
+BITBANK4           100      0       0      13        0.0%
+BANK4              100      0       0      14        0.0%
+BITBANK5           100      0       0      15        0.0%
+BANK5              100      0       0      16        0.0%
+BITBANK6           100      0       0      17        0.0%
+BANK6              100      0       0      18        0.0%
+BITBANK7           100      0       0      19        0.0%
+BANK7              100      0       0      20        0.0%
+BITBANK8           100      0       0      21        0.0%
+BANK8              100      0       0      22        0.0%
+BITBANK9           100      0       0      23        0.0%
+BANK9              100      0       0      24        0.0%
+BITBANK10          100      0       0      25        0.0%
+BANK10             100      0       0      26        0.0%
+BITBANK11          100      0       0      27        0.0%
+BANK11             100      0       0      28        0.0%
+BITBANK12          100      0       0      29        0.0%
+BANK12             100      0       0      30        0.0%
+BITBANK13           FA      0       0      31        0.0%
+BANK13              FA      0       0      32        0.0%
+BIGRAM             DF9      0       0      33        0.0%
+BITSFR_3             0      0       0      40        0.0%
+SFR_3                0      0       0      40        0.0%
+BITSFR_2             0      0       0      40        0.0%
+SFR_2                0      0       0      40        0.0%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.38 build -256452561 
+Symbol Table                                                                                   Mon Nov 20 17:55:13 2017
+
+               ?_displayCtrl 0003                           l52 1000                           l46 0EF0  
+               _putStringLCD 0EF2                  __CFG_BORV$1 000000                          l720 0E5C  
+                        l832 0F5E                          l840 0EFC                          l754 0FBE  
+                        l844 0F1C                          l872 0EC8                          u127 0EA4  
+                        u137 0EB2                          u147 0EC0                          wreg 000FE8  
+                       STR_1 0E01                         _main 0E82                         start 0002  
+              __CFG_IESO$OFF 000000                __CFG_FOSC$FRC 000000                 ___param_bank 000010  
+       __end_of_clearDisplay 0FE0            putStringLCD@input 0006                        ?_main 0001  
+__size_of_initialisation_SPI 003E                        tablat 000FF5                        status 000FD8  
+            __initialization 100C                 __end_of_main 0EF2                       ??_main 000C  
+              __activetblptr 000001                ?_readBusyFlag 0001            spi_Send_Read@byte 0001  
+                     _OSCCON 000FD3               __CFG_XINST$OFF 000000                putchLCD@input 0005  
+             __CFG_STVREN$ON 000000         __size_of_displayCtrl 0044               ??_readBusyFlag 0002  
+               __mediumconst 0000                       tblptrh 000FF7                       tblptrl 000FF6  
+                     tblptru 000FF8             __end_of_putchLCD 0E82                   __accesstop 0060  
+    __end_of__initialization 100C        __size_of_clearDisplay 0022                ___rparam_used 000001  
+             __pcstackCOMRAM 0001                 _clearDisplay 0FBE                putStringLCD@i 000A  
+      __end_of_spi_Send_Read 100C            displayCtrl@cursor 0003                      _SSP2BUF 000F03  
+       __end_of_readBusyFlag 0FFA                      __Hparam 0000                      __Lparam 0000  
+                  ?_putchLCD 0001                 __psmallconst 0E00               displayCtrl@BCD 0006  
+                    __pcinit 100C                      __ramtop 0E00                      __ptext0 0E82  
+                    __ptext1 0EF2                      __ptext2 0E0E                      __ptext3 0F80  
+                    __ptext4 0F3C                      __ptext5 0FBE                      __ptext6 0FE0  
+                    __ptext7 0FFA   __end_of_initialisation_SPI 0FBE         end_of_initialization 100C  
+                 ??_putchLCD 0003                    _RPOR22_23 000E1D                    _RPOR24_25 000E1E  
+       readBusyFlag@retValue 0002                    _TRISCbits 000F94                    _TRISDbits 000F95  
+                 main@status 000D                ??_displayCtrl 0005                ?_putStringLCD 0006  
+        start_initialization 100C        __size_of_readBusyFlag 001A               ??_putStringLCD 0008  
+        __end_of_displayCtrl 0F80                 _readBusyFlag 0FE0             displayCtrl@blink 0004  
+          __size_of_putchLCD 0074                  __smallconst 0E00           displayCtrl@display 0005  
+     __size_of_spi_Send_Read 0012                     _LATDbits 000F8C           _initialisation_SPI 0F80  
+           __CFG_WDTPS$32768 000000          ?_initialisation_SPI 0001                     _SSP2CON1 000F19  
+                   _SSP2CON3 000F39                  _displayCtrl 0F3C                     _SSP2STAT 000F1A  
+       ??_initialisation_SPI 0001         __end_of_putStringLCD 0F3C                     __Hrparam 0000  
+                   __Lrparam 0000                 __Lsmallconst 0E00                _spi_Send_Read 0FFA  
+              ?_clearDisplay 0001                __size_of_main 0070               ?_spi_Send_Read 0001  
+                   _putchLCD 0E0E                 _SSP2STATbits 000F1A               ??_clearDisplay 0003  
+                 _RPINR12_13 000E30        __size_of_putStringLCD 004A              ??_spi_Send_Read 0001  
