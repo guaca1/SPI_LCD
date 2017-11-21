@@ -1,4 +1,17 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[p mainexit ]
+"39 LCD_SPI.h
+[v _initialisation_SPI `(v ~T0 @X0 0 ef ]
+"46
+[v _initialisation_PORT `(v ~T0 @X0 0 ef ]
+"41
+[v _readBusyFlag `(uc ~T0 @X0 0 ef ]
+"44
+[v _clearDisplay `(v ~T0 @X0 0 ef ]
+"45
+[v _displayCtrl `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"42
+[v _putStringLCD `(v ~T0 @X0 0 ef1`*uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -12413,15 +12426,72 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-"12 config_bits.c
-[p x FOSC=FRC ]
+[; ;LCD_SPI.h: 38: unsigned char spi_Send_Read(unsigned char);
+[; ;LCD_SPI.h: 39: void initialisation_SPI(void);
+[; ;LCD_SPI.h: 40: void dly(void);
+[; ;LCD_SPI.h: 41: unsigned char readBusyFlag(void);
+[; ;LCD_SPI.h: 42: void putStringLCD(unsigned char*);
+[; ;LCD_SPI.h: 43: void putchLCD(unsigned char);
+[; ;LCD_SPI.h: 44: void clearDisplay();
+[; ;LCD_SPI.h: 45: void displayCtrl(char display, char cursor, char blink);
+[; ;LCD_SPI.h: 46: void initialisation_PORT(void);
+[v $root$_main `(v ~T0 @X0 0 e ]
+"4 main.c
+[v _main `(v ~T0 @X0 1 ef ]
+"5
+{
+[; ;main.c: 4: void main(void)
+[; ;main.c: 5: {
+[e :U _main ]
+[f ]
+"6
+[v _status `uc ~T0 @X0 1 a ]
+[; ;main.c: 6: unsigned char status = 0;
+[e = _status -> -> 0 `i `uc ]
+"7
+[v _data `uc ~T0 @X0 -> 5 `i a ]
+"8
+[v _i `i ~T0 @X0 1 a ]
+[; ;main.c: 7: unsigned char data[5];
+[; ;main.c: 8: int i;
+[; ;main.c: 13: initialisation_SPI();
+"13
+[e ( _initialisation_SPI ..  ]
+[; ;main.c: 14: initialisation_PORT();
 "14
-[p x IESO=OFF ]
-"16
-[p x BORV=1 ]
+[e ( _initialisation_PORT ..  ]
+[; ;main.c: 19: while(readBusyFlag());
 "19
-[p x WDTPS=32768 ]
+[e $U 1414  ]
+[e :U 1415 ]
+[e :U 1414 ]
+[e $ != -> ( _readBusyFlag ..  `i -> -> -> 0 `i `uc `i 1415  ]
+[e :U 1416 ]
+[; ;main.c: 20: clearDisplay();
+"20
+[e ( _clearDisplay ..  ]
+[; ;main.c: 21: displayCtrl(1,1,0);
+"21
+[e ( _displayCtrl (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 22: putStringLCD("Hello world");
 "22
-[p x STVREN=ON ]
+[e ( _putStringLCD (1 -> :s 1C `*uc ]
+[; ;main.c: 23: while (1)
+"23
+[e :U 1418 ]
+[; ;main.c: 24: {
 "24
-[p x XINST=OFF ]
+{
+"26
+}
+[e :U 1417 ]
+"23
+[e $U 1418  ]
+[e :U 1419 ]
+[; ;main.c: 26: }
+[; ;main.c: 27: }
+"27
+[e :UE 1413 ]
+}
+[a 1C 72 101 108 108 111 32 119 111 114 108 100 0 ]
+
