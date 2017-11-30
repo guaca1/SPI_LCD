@@ -10,16 +10,11 @@
      // run internal oscillator at 8 MHz
 
      
-     initialisation_SPI();
-     initialisation_PORT();
+     initialisation_LCD();
      //OpenSPI(SPI_FOSC_16, MODE_00, SMPMID); //open SPI1
      
 
-     
-    while(readBusyFlag());
-    clearDisplay();
-    displayCtrl(1,1,0);
-    putStringLCD("Hello world");
+    
      while (1)
      {
         
