@@ -154,3 +154,45 @@ void initialisation_LCD()
     displayCtrl(1,1,0);
     
 }
+
+void clearRow(int row)
+{
+    moveCursor(row,0);
+    putStringLCD("                    ");
+}
+
+void putNumberLCD(int number)
+{
+    int signe = 0;
+    int i = 0;
+    int diviseur = 10000;
+    int chiffreAffichage = 0;
+    char stringAffichage[2];
+    int begin = 0;
+    
+    signe = number&0x8000;
+    
+    if (signe)
+    {
+        number ^= 0xFFFF;
+        number += 1;
+        putStringLCD("-");
+    }
+    
+    for(i =0;i<5;i++)
+    {
+        chiffreAffichage =0;
+        chiffreAffichage = number/diviseur;
+        number = number-(diviseur*chiffreAffichage);
+        diviseur = diviseur/10;
+        if (chiffreAffichage>0 || begin)
+        {
+            begin =1;
+            chiffreAffichage += 48;
+            stringAffichage[0] = (char)chiffreAffichage;
+            stringAffichage[1] = '\0';
+            putStringLCD(stringAffichage);
+        }
+    }
+    
+}

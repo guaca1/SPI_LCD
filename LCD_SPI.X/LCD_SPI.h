@@ -47,6 +47,8 @@ void initialisation_PORT(void);
 void initialisation_LCD();
 void moveCursor(int row, int col);
 char fliplr(char input);
+void putNumberLCD(int number);
+void clearRow(int row);
 
  // Defines
  #define SPI_SCK        LATDbits.LATD2        // Clock pin, PORTD pin 2 
