@@ -17623,6 +17623,10 @@ return input;
 void moveCursor(int row, int col)
 {
 char address = row * 20 + col;
+if (row >= 2)
+{
+address += 24;
+}
 address = fliplr(address);
 while(readBusyFlag());
 LATDbits.LATD3 = 0;

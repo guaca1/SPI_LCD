@@ -39,11 +39,14 @@ unsigned char spi_Send_Read(unsigned char);
 void initialisation_SPI(void);
 void dly(void);
 unsigned char readBusyFlag(void);
-void putStringLCD(unsigned char*);
+void putStringLCD(const unsigned char*);
 void putchLCD(unsigned char);
 void clearDisplay();
 void displayCtrl(char display, char cursor, char blink);
- void initialisation_PORT(void);
+void initialisation_PORT(void);
+void initialisation_LCD();
+void moveCursor(int row, int col);
+char fliplr(char input);
 
  // Defines
  #define SPI_SCK        LATDbits.LATD2        // Clock pin, PORTD pin 2 

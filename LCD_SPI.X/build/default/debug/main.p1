@@ -1,195 +1,11 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"29736 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f67j94.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"6 main.c
-[v _initialisation_SPI `(v ~T0 @X0 0 ef ]
-"25038 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f67j94.h
-[s S1371 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1371 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
-"25037
-[u S1370 `S1371 1 ]
-[n S1370 . . ]
-"25049
-[v _TRISDbits `VS1370 ~T0 @X0 0 e@3989 ]
-"24977
-[s S1369 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1369 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"24976
-[u S1368 `S1369 1 ]
-[n S1368 . . ]
-"24988
-[v _TRISCbits `VS1368 ~T0 @X0 0 e@3988 ]
-"24400
-[s S1330 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1330 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"24410
-[s S1331 :1 `uc 1 ]
-[n S1331 . LD0 ]
-"24413
-[s S1332 :1 `uc 1 :1 `uc 1 ]
-[n S1332 . . LD1 ]
-"24417
-[s S1333 :2 `uc 1 :1 `uc 1 ]
-[n S1333 . . LD2 ]
-"24421
-[s S1334 :3 `uc 1 :1 `uc 1 ]
-[n S1334 . . LD3 ]
-"24425
-[s S1335 :4 `uc 1 :1 `uc 1 ]
-[n S1335 . . LD4 ]
-"24429
-[s S1336 :5 `uc 1 :1 `uc 1 ]
-[n S1336 . . LD5 ]
-"24433
-[s S1337 :6 `uc 1 :1 `uc 1 ]
-[n S1337 . . LD6 ]
-"24437
-[s S1338 :7 `uc 1 :1 `uc 1 ]
-[n S1338 . . LD7 ]
-"24399
-[u S1329 `S1330 1 `S1331 1 `S1332 1 `S1333 1 `S1334 1 `S1335 1 `S1336 1 `S1337 1 `S1338 1 ]
-[n S1329 . . . . . . . . . . ]
-"24442
-[v _LATDbits `VS1329 ~T0 @X0 0 e@3980 ]
-"43 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
-[v F14241 `(v ~T0 @X0 1 tf1`ul ]
-"157
-[v __delay `JF14241 ~T0 @X0 0 e ]
-[p i __delay ]
-"8 main.c
-[v _readBusyFlag `(uc ~T0 @X0 0 ef ]
-"11
-[v _clearDisplay `(v ~T0 @X0 0 ef ]
-"12
-[v _displayCtrl `(v ~T0 @X0 0 ef3`uc`uc`uc ]
-"9
-[v _putStringLCD `(v ~T0 @X0 0 ef1`*uc ]
-"15476 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f67j94.h
-[v _SSP2BUF `Vuc ~T0 @X0 0 e@3843 ]
-"16775
-[s S865 :2 `uc 1 :1 `uc 1 ]
-[n S865 . . R_NOT_W ]
-"16779
-[s S866 :5 `uc 1 :1 `uc 1 ]
-[n S866 . . D_NOT_A ]
-"16783
-[s S867 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S867 . BF UA R_nW S P D_nA CKE SMP ]
-"16793
-[s S868 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S868 . . R_W . D_A ]
-"16799
-[s S869 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S869 . . nW . nA ]
-"16805
-[s S870 :2 `uc 1 :1 `uc 1 ]
-[n S870 . . NOT_WRITE ]
-"16809
-[s S871 :5 `uc 1 :1 `uc 1 ]
-[n S871 . . NOT_ADDRESS ]
-"16813
-[s S872 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S872 . . nWRITE . nADDRESS ]
-"16819
-[s S873 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S873 . . READ_WRITE . DATA_ADDRESS ]
-"16825
-[s S874 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S874 . . I2C_READ I2C_START I2C_STOP I2C_DAT ]
-"16832
-[s S875 :1 `uc 1 ]
-[n S875 . BF2 ]
-"16835
-[s S876 :6 `uc 1 :1 `uc 1 ]
-[n S876 . . CKE2 ]
-"16839
-[s S877 :5 `uc 1 :1 `uc 1 ]
-[n S877 . . DA2 ]
-"16843
-[s S878 :5 `uc 1 :1 `uc 1 ]
-[n S878 . . DATA_ADDRESS2 ]
-"16847
-[s S879 :5 `uc 1 :1 `uc 1 ]
-[n S879 . . D_A2 ]
-"16851
-[s S880 :5 `uc 1 :1 `uc 1 ]
-[n S880 . . D_nA2 ]
-"16855
-[s S881 :5 `uc 1 :1 `uc 1 ]
-[n S881 . . I2C_DAT2 ]
-"16859
-[s S882 :2 `uc 1 :1 `uc 1 ]
-[n S882 . . I2C_READ2 ]
-"16863
-[s S883 :3 `uc 1 :1 `uc 1 ]
-[n S883 . . I2C_START2 ]
-"16867
-[s S884 :4 `uc 1 :1 `uc 1 ]
-[n S884 . . I2C_STOP2 ]
-"16871
-[s S885 :4 `uc 1 :1 `uc 1 ]
-[n S885 . . P2 ]
-"16875
-[s S886 :2 `uc 1 :1 `uc 1 ]
-[n S886 . . READ_WRITE2 ]
-"16879
-[s S887 :2 `uc 1 :1 `uc 1 ]
-[n S887 . . RW2 ]
-"16883
-[s S888 :2 `uc 1 :1 `uc 1 ]
-[n S888 . . R_W2 ]
-"16887
-[s S889 :2 `uc 1 :1 `uc 1 ]
-[n S889 . . R_nW2 ]
-"16891
-[s S890 :3 `uc 1 :1 `uc 1 ]
-[n S890 . . S2 ]
-"16895
-[s S891 :7 `uc 1 :1 `uc 1 ]
-[n S891 . . SMP2 ]
-"16899
-[s S892 :3 `uc 1 :1 `uc 1 ]
-[n S892 . . START2 ]
-"16903
-[s S893 :4 `uc 1 :1 `uc 1 ]
-[n S893 . . STOP2 ]
-"16907
-[s S894 :1 `uc 1 :1 `uc 1 ]
-[n S894 . . UA2 ]
-"16911
-[s S895 :5 `uc 1 :1 `uc 1 ]
-[n S895 . . nA2 ]
-"16915
-[s S896 :5 `uc 1 :1 `uc 1 ]
-[n S896 . . nADDRESS2 ]
-"16919
-[s S897 :2 `uc 1 :1 `uc 1 ]
-[n S897 . . nW2 ]
-"16923
-[s S898 :2 `uc 1 :1 `uc 1 ]
-[n S898 . . nWRITE2 ]
-"16774
-[u S864 `S865 1 `S866 1 `S867 1 `S868 1 `S869 1 `S870 1 `S871 1 `S872 1 `S873 1 `S874 1 `S875 1 `S876 1 `S877 1 `S878 1 `S879 1 `S880 1 `S881 1 `S882 1 `S883 1 `S884 1 `S885 1 `S886 1 `S887 1 `S888 1 `S889 1 `S890 1 `S891 1 `S892 1 `S893 1 `S894 1 `S895 1 `S896 1 `S897 1 `S898 1 ]
-[n S864 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ]
-"16928
-[v _SSP2STATbits `VS864 ~T0 @X0 0 e@3866 ]
-"10 main.c
-[v _putchLCD `(v ~T0 @X0 0 ef1`uc ]
-"2871 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f67j94.h
-[v _RPOR24_25 `Vuc ~T0 @X0 0 e@3614 ]
-"2796
-[v _RPOR22_23 `Vuc ~T0 @X0 0 e@3613 ]
-"4191
-[v _RPINR12_13 `Vuc ~T0 @X0 0 e@3632 ]
-"16629
-[v _SSP2CON1 `Vuc ~T0 @X0 0 e@3865 ]
-"16769
-[v _SSP2STAT `Vuc ~T0 @X0 0 e@3866 ]
-"19245
-[v _SSP2CON3 `Vuc ~T0 @X0 0 e@3897 ]
+"47 LCD_SPI.h
+[v _initialisation_LCD `(v ~T0 @X0 0 ef ]
+"48
+[v _moveCursor `(v ~T0 @X0 0 ef2`i`i ]
+"42
+[v _putStringLCD `(v ~T0 @X0 0 ef1`*Cuc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -13396,422 +13212,102 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 157: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 159: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 161: extern __nonreentrant void _delay3(unsigned char);
-[; ;main.c: 5: unsigned char spi_Send_Read(unsigned char);
-[; ;main.c: 6: void initialisation_SPI(void);
-[; ;main.c: 7: void dly(void);
-[; ;main.c: 8: unsigned char readBusyFlag();
-[; ;main.c: 9: void putStringLCD(unsigned char*);
-[; ;main.c: 10: void putchLCD(unsigned char);
-[; ;main.c: 11: void clearDisplay();
-[; ;main.c: 12: void displayCtrl(char display, char cursor, char blink);
-"24 main.c
+[; ;LCD_SPI.h: 38: unsigned char spi_Send_Read(unsigned char);
+[; ;LCD_SPI.h: 39: void initialisation_SPI(void);
+[; ;LCD_SPI.h: 40: void dly(void);
+[; ;LCD_SPI.h: 41: unsigned char readBusyFlag(void);
+[; ;LCD_SPI.h: 42: void putStringLCD(const unsigned char*);
+[; ;LCD_SPI.h: 43: void putchLCD(unsigned char);
+[; ;LCD_SPI.h: 44: void clearDisplay();
+[; ;LCD_SPI.h: 45: void displayCtrl(char display, char cursor, char blink);
+[; ;LCD_SPI.h: 46: void initialisation_PORT(void);
+[; ;LCD_SPI.h: 47: void initialisation_LCD();
+[; ;LCD_SPI.h: 48: void moveCursor(int row, int col);
+[; ;LCD_SPI.h: 49: char fliplr(char input);
+"4 main.c
 [v _main `(v ~T0 @X0 1 ef ]
-"25
+"5
 {
-[; ;main.c: 24: void main(void)
-[; ;main.c: 25: {
+[; ;main.c: 4: void main(void)
+[; ;main.c: 5: {
 [e :U _main ]
 [f ]
-"26
+"6
 [v _status `uc ~T0 @X0 1 a ]
-[; ;main.c: 26: unsigned char status = 0;
+[; ;main.c: 6: unsigned char status = 0;
 [e = _status -> -> 0 `i `uc ]
-"27
+"7
 [v _data `uc ~T0 @X0 -> 5 `i a ]
-"28
+"8
 [v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 27: unsigned char data[5];
-[; ;main.c: 28: int i;
-[; ;main.c: 31: OSCCON = OSCCON | 0b01110000;
+[; ;main.c: 7: unsigned char data[5];
+[; ;main.c: 8: int i;
+[; ;main.c: 13: initialisation_LCD();
+"13
+[e ( _initialisation_LCD ..  ]
+[; ;main.c: 18: moveCursor(0, 0);
+"18
+[e ( _moveCursor (2 , -> 0 `i -> 0 `i ]
+[; ;main.c: 19: putStringLCD("world");
+"19
+[e ( _putStringLCD (1 :s 1C ]
+[; ;main.c: 20: moveCursor(1, 4);
+"20
+[e ( _moveCursor (2 , -> 1 `i -> 4 `i ]
+[; ;main.c: 21: putStringLCD("world");
+"21
+[e ( _putStringLCD (1 :s 2C ]
+[; ;main.c: 22: moveCursor(2, 8);
+"22
+[e ( _moveCursor (2 , -> 2 `i -> 8 `i ]
+[; ;main.c: 23: putStringLCD("world");
+"23
+[e ( _putStringLCD (1 :s 3C ]
+[; ;main.c: 24: moveCursor(3, 12);
+"24
+[e ( _moveCursor (2 , -> 3 `i -> 12 `i ]
+[; ;main.c: 25: putStringLCD("world");
+"25
+[e ( _putStringLCD (1 :s 4C ]
+[; ;main.c: 26: moveCursor(3, 2);
+"26
+[e ( _moveCursor (2 , -> 3 `i -> 2 `i ]
+[; ;main.c: 27: putStringLCD("world");
+"27
+[e ( _putStringLCD (1 :s 5C ]
+[; ;main.c: 28: moveCursor(3, 2);
+"28
+[e ( _moveCursor (2 , -> 3 `i -> 2 `i ]
+[; ;main.c: 29: putStringLCD("world");
+"29
+[e ( _putStringLCD (1 :s 6C ]
+[; ;main.c: 30: moveCursor(3, 2);
+"30
+[e ( _moveCursor (2 , -> 3 `i -> 2 `i ]
+[; ;main.c: 31: putStringLCD("world");
 "31
-[e = _OSCCON -> | -> _OSCCON `i -> 112 `i `uc ]
-[; ;main.c: 33: initialisation_SPI();
-"33
-[e ( _initialisation_SPI ..  ]
-[; ;main.c: 37: TRISDbits.TRISD4 = 0;
-"37
-[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 38: TRISDbits.TRISD2 = 0;
-"38
-[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 39: TRISDbits.TRISD3 = 0;
-"39
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 40: TRISDbits.TRISD1 = 1;
-"40
-[e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 41: TRISCbits.TRISC0 = 0;
-"41
-[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 42: LATDbits.LATD3 = 1;
-"42
-[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 43: __nop();
-"43
-[e ( ___nop ..  ]
-[; ;main.c: 44: _delay((unsigned long)((33)*(8000000/4000.0)));
-"44
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 45: _delay((unsigned long)((33)*(8000000/4000.0)));
-"45
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 46: _delay((unsigned long)((33)*(8000000/4000.0)));
-"46
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 48: while(readBusyFlag());
-"48
-[e $U 1752  ]
+[e ( _putStringLCD (1 :s 7C ]
+[; ;main.c: 32: while (1)
+"32
 [e :U 1753 ]
-[e :U 1752 ]
-[e $ != -> ( _readBusyFlag ..  `i -> -> -> 0 `i `uc `i 1753  ]
-[e :U 1754 ]
-[; ;main.c: 49: clearDisplay();
-"49
-[e ( _clearDisplay ..  ]
-[; ;main.c: 50: displayCtrl(1,1,0);
-"50
-[e ( _displayCtrl (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 51: putStringLCD("Hello world");
-"51
-[e ( _putStringLCD (1 -> :s 1C `*uc ]
-[; ;main.c: 52: while (1)
-"52
-[e :U 1756 ]
-[; ;main.c: 53: {
-"53
+[; ;main.c: 33: {
+"33
 {
-"55
+"35
 }
-[e :U 1755 ]
-"52
-[e $U 1756  ]
-[e :U 1757 ]
-[; ;main.c: 55: }
-[; ;main.c: 56: }
-"56
+[e :U 1752 ]
+"32
+[e $U 1753  ]
+[e :U 1754 ]
+[; ;main.c: 35: }
+[; ;main.c: 36: }
+"36
 [e :UE 1751 ]
 }
-"59
-[v _spi_Send_Read `(uc ~T0 @X0 1 ef1`uc ]
-"60
-{
-[; ;main.c: 59: unsigned char spi_Send_Read(unsigned char byte)
-[; ;main.c: 60: {
-[e :U _spi_Send_Read ]
-"59
-[v _byte `uc ~T0 @X0 1 r1 ]
-"60
-[f ]
-[; ;main.c: 61: SSP2BUF = byte;
-"61
-[e = _SSP2BUF _byte ]
-[; ;main.c: 62: while(!SSP2STATbits.BF);
-"62
-[e $U 1759  ]
-[e :U 1760 ]
-[e :U 1759 ]
-[e $ ! != -> . . _SSP2STATbits 2 0 `i -> -> -> 0 `i `Vuc `i 1760  ]
-[e :U 1761 ]
-[; ;main.c: 63: return SSP2BUF;
-"63
-[e ) _SSP2BUF ]
-[e $UE 1758  ]
-[; ;main.c: 64: }
-"64
-[e :UE 1758 ]
-}
-"66
-[v _clearDisplay `(v ~T0 @X0 1 ef ]
-"67
-{
-[; ;main.c: 66: void clearDisplay()
-[; ;main.c: 67: {
-[e :U _clearDisplay ]
-[f ]
-[; ;main.c: 68: while(readBusyFlag());
-"68
-[e $U 1763  ]
-[e :U 1764 ]
-[e :U 1763 ]
-[e $ != -> ( _readBusyFlag ..  `i -> -> -> 0 `i `uc `i 1764  ]
-[e :U 1765 ]
-[; ;main.c: 70: LATDbits.LATD3 = 0;
-"70
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 71: spi_Send_Read(0xF8);
-"71
-[e ( _spi_Send_Read (1 -> -> 248 `i `uc ]
-[; ;main.c: 72: spi_Send_Read(0x80);
-"72
-[e ( _spi_Send_Read (1 -> -> 128 `i `uc ]
-[; ;main.c: 73: spi_Send_Read(0x00);
-"73
-[e ( _spi_Send_Read (1 -> -> 0 `i `uc ]
-[; ;main.c: 74: LATDbits.LATD3 = 1;
-"74
-[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 76: }
-"76
-[e :UE 1762 ]
-}
-"78
-[v _displayCtrl `(v ~T0 @X0 1 ef3`uc`uc`uc ]
-"79
-{
-[; ;main.c: 78: void displayCtrl(char display, char cursor, char blink)
-[; ;main.c: 79: {
-[e :U _displayCtrl ]
-"78
-[v _display `uc ~T0 @X0 1 r1 ]
-[v _cursor `uc ~T0 @X0 1 r2 ]
-[v _blink `uc ~T0 @X0 1 r3 ]
-"79
-[f ]
-"80
-[v _BCD `uc ~T0 @X0 1 a ]
-[; ;main.c: 80: char BCD = blink;
-[e = _BCD _blink ]
-[; ;main.c: 81: BCD <<= 1;
-"81
-[e =<< _BCD -> 1 `i ]
-[; ;main.c: 82: BCD += cursor;
-"82
-[e =+ _BCD _cursor ]
-[; ;main.c: 83: BCD <<= 1;
-"83
-[e =<< _BCD -> 1 `i ]
-[; ;main.c: 84: BCD += display;
-"84
-[e =+ _BCD _display ]
-[; ;main.c: 85: BCD <<= 1;
-"85
-[e =<< _BCD -> 1 `i ]
-[; ;main.c: 86: BCD += 1;
-"86
-[e =+ _BCD -> -> 1 `i `uc ]
-[; ;main.c: 87: BCD <<= 4;
-"87
-[e =<< _BCD -> 4 `i ]
-[; ;main.c: 89: while(readBusyFlag());
-"89
-[e $U 1767  ]
-[e :U 1768 ]
-[e :U 1767 ]
-[e $ != -> ( _readBusyFlag ..  `i -> -> -> 0 `i `uc `i 1768  ]
-[e :U 1769 ]
-[; ;main.c: 90: LATDbits.LATD3 = 0;
-"90
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 91: spi_Send_Read(0xF8);
-"91
-[e ( _spi_Send_Read (1 -> -> 248 `i `uc ]
-[; ;main.c: 92: spi_Send_Read(BCD);
-"92
-[e ( _spi_Send_Read (1 _BCD ]
-[; ;main.c: 93: spi_Send_Read(0x00);
-"93
-[e ( _spi_Send_Read (1 -> -> 0 `i `uc ]
-[; ;main.c: 94: LATDbits.LATD3 = 1;
-"94
-[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 95: }
-"95
-[e :UE 1766 ]
-}
-"96
-[v _putStringLCD `(v ~T0 @X0 1 ef1`*uc ]
-"97
-{
-[; ;main.c: 96: void putStringLCD(unsigned char* input)
-[; ;main.c: 97: {
-[e :U _putStringLCD ]
-"96
-[v _input `*uc ~T0 @X0 1 r1 ]
-"97
-[f ]
-"98
-[v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 98: int i;
-[; ;main.c: 99: for (i = 0; input[i] != '\0'; i++)
-"99
-{
-[e = _i -> 0 `i ]
-[e $U 1774  ]
-"100
-[e :U 1771 ]
-[; ;main.c: 100: {
-{
-[; ;main.c: 101: putchLCD(input[i]);
-"101
-[e ( _putchLCD (1 *U + _input * -> _i `x -> -> # *U _input `i `x ]
-"102
-}
-"99
-[e ++ _i -> 1 `i ]
-[e :U 1774 ]
-[e $ != -> *U + _input * -> _i `x -> -> # *U _input `i `x `ui -> 0 `ui 1771  ]
-[e :U 1772 ]
-"102
-}
-[; ;main.c: 102: }
-[; ;main.c: 104: }
-"104
-[e :UE 1770 ]
-}
-"105
-[v _putchLCD `(v ~T0 @X0 1 ef1`uc ]
-"106
-{
-[; ;main.c: 105: void putchLCD(unsigned char input)
-[; ;main.c: 106: {
-[e :U _putchLCD ]
-"105
-[v _input `uc ~T0 @X0 1 r1 ]
-"106
-[f ]
-[; ;main.c: 107: input = (input & 0xF0) >> 4 | (input & 0x0F) << 4;
-"107
-[e = _input -> | >> & -> _input `i -> 240 `i -> 4 `i << & -> _input `i -> 15 `i -> 4 `i `uc ]
-[; ;main.c: 108: input = (input & 0xCC) >> 2 | (input & 0x33) << 2;
-"108
-[e = _input -> | >> & -> _input `i -> 204 `i -> 2 `i << & -> _input `i -> 51 `i -> 2 `i `uc ]
-[; ;main.c: 109: input = (input & 0xAA) >> 1 | (input & 0x55) << 1;
-"109
-[e = _input -> | >> & -> _input `i -> 170 `i -> 1 `i << & -> _input `i -> 85 `i -> 1 `i `uc ]
-[; ;main.c: 111: while(readBusyFlag());
-"111
-[e $U 1776  ]
-[e :U 1777 ]
-[e :U 1776 ]
-[e $ != -> ( _readBusyFlag ..  `i -> -> -> 0 `i `uc `i 1777  ]
-[e :U 1778 ]
-[; ;main.c: 112: LATDbits.LATD3 = 0;
-"112
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 113: spi_Send_Read(0xFA);
-"113
-[e ( _spi_Send_Read (1 -> -> 250 `i `uc ]
-[; ;main.c: 114: spi_Send_Read(input & 0xF0);
-"114
-[e ( _spi_Send_Read (1 -> & -> _input `i -> 240 `i `uc ]
-[; ;main.c: 115: spi_Send_Read(input << 4);
-"115
-[e ( _spi_Send_Read (1 -> << -> _input `i -> 4 `i `uc ]
-[; ;main.c: 116: LATDbits.LATD3 = 1;
-"116
-[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 118: }
-"118
-[e :UE 1775 ]
-}
-"120
-[v _readBusyFlag `(uc ~T0 @X0 1 ef ]
-"121
-{
-[; ;main.c: 120: unsigned char readBusyFlag()
-[; ;main.c: 121: {
-[e :U _readBusyFlag ]
-[f ]
-"122
-[v _retValue `uc ~T0 @X0 1 a ]
-[; ;main.c: 122: unsigned char retValue;
-[; ;main.c: 124: LATDbits.LATD3 = 0;
-"124
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 125: spi_Send_Read(0xFC);
-"125
-[e ( _spi_Send_Read (1 -> -> 252 `i `uc ]
-[; ;main.c: 126: retValue = spi_Send_Read(0x00);
-"126
-[e = _retValue ( _spi_Send_Read (1 -> -> 0 `i `uc ]
-[; ;main.c: 127: LATDbits.LATD3 = 1;
-"127
-[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 128: _delay((unsigned long)((1)*(8000000/4000000.0)));
-"128
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 129: return retValue & 1;
-"129
-[e ) -> & -> _retValue `i -> 1 `i `uc ]
-[e $UE 1779  ]
-[; ;main.c: 130: }
-"130
-[e :UE 1779 ]
-}
-"131
-[v _dly `(v ~T0 @X0 1 ef ]
-"132
-{
-[; ;main.c: 131: void dly(void)
-[; ;main.c: 132: {
-[e :U _dly ]
-[f ]
-"133
-[v _i `ui ~T0 @X0 1 a ]
-[; ;main.c: 133: unsigned int i;
-[; ;main.c: 135: for (i = 0; i < 50000; i++)
-"135
-{
-[e = _i -> -> 0 `i `ui ]
-[e $ < -> _i `l -> 50000 `l 1781  ]
-[e $U 1782  ]
-"136
-[e :U 1781 ]
-[; ;main.c: 136: ;
-"135
-[e ++ _i -> -> 1 `i `ui ]
-[e $ < -> _i `l -> 50000 `l 1781  ]
-[e :U 1782 ]
-"136
-}
-[; ;main.c: 137: }
-"137
-[e :UE 1780 ]
-}
-"139
-[v _initialisation_SPI `(v ~T0 @X0 1 ef ]
-"140
-{
-[; ;main.c: 139: void initialisation_SPI(void)
-[; ;main.c: 140: {
-[e :U _initialisation_SPI ]
-[f ]
-[; ;main.c: 143: RPOR24_25 |= 0x04;
-"143
-[e =| _RPOR24_25 -> -> 4 `i `uc ]
-[; ;main.c: 144: RPOR24_25 &= 0xF4;
-"144
-[e =& _RPOR24_25 -> -> 244 `i `uc ]
-[; ;main.c: 146: RPOR22_23 |= 0x05;
-"146
-[e =| _RPOR22_23 -> -> 5 `i `uc ]
-[; ;main.c: 147: RPOR22_23 &= 0xF5;
-"147
-[e =& _RPOR22_23 -> -> 245 `i `uc ]
-[; ;main.c: 149: RPINR12_13 |= 0x50;
-"149
-[e =| _RPINR12_13 -> -> 80 `i `uc ]
-[; ;main.c: 150: RPINR12_13 &= 0x5F;
-"150
-[e =& _RPINR12_13 -> -> 95 `i `uc ]
-[; ;main.c: 153: SSP2CON1 &= 0xF1;
-"153
-[e =& _SSP2CON1 -> -> 241 `i `uc ]
-[; ;main.c: 154: SSP2CON1 |= 0x31;
-"154
-[e =| _SSP2CON1 -> -> 49 `i `uc ]
-[; ;main.c: 155: SSP2STAT |= 0x80;
-"155
-[e =| _SSP2STAT -> -> 128 `i `uc ]
-[; ;main.c: 156: SSP2STAT &= ~0x40;
-"156
-[e =& _SSP2STAT -> ~ -> 64 `i `uc ]
-[; ;main.c: 157: SSP2CON3 &= 0x8F;
-"157
-[e =& _SSP2CON3 -> -> 143 `i `uc ]
-[; ;main.c: 159: }
-"159
-[e :UE 1784 ]
-}
-[a 1C 72 101 108 108 111 32 119 111 114 108 100 0 ]
-
+[a 1C 119 111 114 108 100 0 ]
+[a 2C 119 111 114 108 100 0 ]
+[a 3C 119 111 114 108 100 0 ]
+[a 4C 119 111 114 108 100 0 ]
+[a 5C 119 111 114 108 100 0 ]
+[a 6C 119 111 114 108 100 0 ]
+[a 7C 119 111 114 108 100 0 ]

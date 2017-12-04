@@ -3,64 +3,70 @@
 [d edition pro ]
 [d chip 18F67J94 ]
 [d frameptr 4065 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\float.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftadd.c
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"54 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftdiv.c
+"54 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftmul.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
-"20 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\ftsub.c
+"20 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\sprcadd.c
+"10 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 3 0 ]
-"11 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\sprcdiv.c
+"11 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\sprcmul.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 3 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.43\sources\common\Umul32.c
+"15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"12 C:\Users\Guacamole\Documents\LCD\LCD_SPI.X\LCD_SPI.c
+"11 U:\SPI_LCD\LCD_SPI.X\LCD_SPI.c
 [v _spi_Send_Read spi_Send_Read `(uc  1 e 1 0 ]
-"19
+"18
 [v _clearDisplay clearDisplay `(v  1 e 1 0 ]
-"31
+"30
 [v _displayCtrl displayCtrl `(v  1 e 1 0 ]
-"49
+"48
 [v _putStringLCD putStringLCD `(v  1 e 1 0 ]
-"58
+"57
 [v _putchLCD putchLCD `(v  1 e 1 0 ]
-"73
+"69
+[v _fliplr fliplr `(uc  1 e 1 0 ]
+"78
+[v _moveCursor moveCursor `(v  1 e 1 0 ]
+"89
 [v _readBusyFlag readBusyFlag `(uc  1 e 1 0 ]
-"92
+"108
 [v _initialisation_SPI initialisation_SPI `(v  1 e 1 0 ]
-"114
+"130
 [v _initialisation_PORT initialisation_PORT `(v  1 e 1 0 ]
-"4 C:\Users\Guacamole\Documents\LCD\LCD_SPI.X\main.c
+"145
+[v _initialisation_LCD initialisation_LCD `(v  1 e 1 0 ]
+"4 U:\SPI_LCD\LCD_SPI.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"2536 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic18f67j94.h
+"2796 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f67j94.h
 [v _RPOR22_23 RPOR22_23 `VEuc  1 e 1 @3613 ]
-"2612
+"2871
 [v _RPOR24_25 RPOR24_25 `VEuc  1 e 1 @3614 ]
-"3950
+"4191
 [v _RPINR12_13 RPINR12_13 `VEuc  1 e 1 @3632 ]
-"15488
+"15476
 [v _SSP2BUF SSP2BUF `VEuc  1 e 1 @3843 ]
-"16649
+"16629
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @3865 ]
 "16769
 [v _SSP2STAT SSP2STAT `VEuc  1 e 1 @3866 ]
-[s S59 . 1 `uc 1 . 1 0 :2:0 
+[s S43 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
-"16918
-[s S62 . 1 `uc 1 . 1 0 :5:0 
+"16928
+[s S46 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S65 . 1 `uc 1 BF 1 0 :1:0 
+[s S49 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -69,113 +75,114 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S74 . 1 `uc 1 . 1 0 :2:0 
+[s S58 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S79 . 1 `uc 1 . 1 0 :2:0 
+[s S63 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S84 . 1 `uc 1 . 1 0 :2:0 
+[s S68 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S87 . 1 `uc 1 . 1 0 :5:0 
+[s S71 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S90 . 1 `uc 1 . 1 0 :2:0 
+[s S74 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S95 . 1 `uc 1 . 1 0 :2:0 
+[s S79 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S100 . 1 `uc 1 . 1 0 :2:0 
+[s S84 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S106 . 1 `uc 1 BF2 1 0 :1:0 
-`uc 1 UA2 1 0 :1:1 
-`uc 1 I2C_READ2 1 0 :1:2 
-`uc 1 I2C_START2 1 0 :1:3 
-`uc 1 I2C_STOP2 1 0 :1:4 
-`uc 1 DA2 1 0 :1:5 
-`uc 1 CKE2 1 0 :1:6 
-`uc 1 SMP2 1 0 :1:7 
+[s S90 . 1 `uc 1 BF2 1 0 :1:0 
 ]
-[s S115 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 READ_WRITE2 1 0 :1:2 
-`uc 1 S2 1 0 :1:3 
-`uc 1 P2 1 0 :1:4 
+[s S92 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CKE2 1 0 :1:6 
+]
+[s S95 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 DA2 1 0 :1:5 
+]
+[s S98 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 DATA_ADDRESS2 1 0 :1:5 
 ]
-[s S121 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 RW2 1 0 :1:2 
-`uc 1 START2 1 0 :1:3 
-`uc 1 STOP2 1 0 :1:4 
+[s S101 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_A2 1 0 :1:5 
 ]
-[s S127 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 D_NOT_A2 1 0 :1:5 
-]
-[s S130 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_W2 1 0 :1:2 
-`uc 1 START 1 0 :1:3 
-`uc 1 STOP 1 0 :1:4 
+[s S104 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_nA2 1 0 :1:5 
 ]
-[s S136 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_NOT_W2 1 0 :1:2 
-]
-[s S139 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R_nW2 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
+[s S107 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 I2C_DAT2 1 0 :1:5 
 ]
-[s S144 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_W2 1 0 :1:2 
+[s S110 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ2 1 0 :1:2 
 ]
-[s S147 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 NOT_A2 1 0 :1:5 
+[s S113 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 I2C_START2 1 0 :1:3 
 ]
-[s S150 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 nW2 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
+[s S116 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 I2C_STOP2 1 0 :1:4 
+]
+[s S119 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 P2 1 0 :1:4 
+]
+[s S122 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE2 1 0 :1:2 
+]
+[s S125 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW2 1 0 :1:2 
+]
+[s S128 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W2 1 0 :1:2 
+]
+[s S131 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_nW2 1 0 :1:2 
+]
+[s S134 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 S2 1 0 :1:3 
+]
+[s S137 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SMP2 1 0 :1:7 
+]
+[s S140 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 START2 1 0 :1:3 
+]
+[s S143 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 STOP2 1 0 :1:4 
+]
+[s S146 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 UA2 1 0 :1:1 
+]
+[s S149 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S155 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_WRITE2 1 0 :1:2 
-]
-[s S158 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 NOT_ADDRESS2 1 0 :1:5 
-]
-[s S161 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 nWRITE2 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
+[s S152 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 nADDRESS2 1 0 :1:5 
 ]
-[s S166 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 R 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 D 1 0 :1:5 
+[s S155 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW2 1 0 :1:2 
 ]
-[s S171 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 RW 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 DA 1 0 :1:5 
+[s S158 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE2 1 0 :1:2 
 ]
-[u S176 . 1 `S59 1 . 1 0 `S62 1 . 1 0 `S65 1 . 1 0 `S74 1 . 1 0 `S79 1 . 1 0 `S84 1 . 1 0 `S87 1 . 1 0 `S90 1 . 1 0 `S95 1 . 1 0 `S100 1 . 1 0 `S106 1 . 1 0 `S115 1 . 1 0 `S121 1 . 1 0 `S127 1 . 1 0 `S130 1 . 1 0 `S136 1 . 1 0 `S139 1 . 1 0 `S144 1 . 1 0 `S147 1 . 1 0 `S150 1 . 1 0 `S155 1 . 1 0 `S158 1 . 1 0 `S161 1 . 1 0 `S166 1 . 1 0 `S171 1 . 1 0 ]
-[v _SSP2STATbits SSP2STATbits `VES176  1 e 1 @3866 ]
-"19378
+[u S161 . 1 `S43 1 . 1 0 `S46 1 . 1 0 `S49 1 . 1 0 `S58 1 . 1 0 `S63 1 . 1 0 `S68 1 . 1 0 `S71 1 . 1 0 `S74 1 . 1 0 `S79 1 . 1 0 `S84 1 . 1 0 `S90 1 . 1 0 `S92 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 `S101 1 . 1 0 `S104 1 . 1 0 `S107 1 . 1 0 `S110 1 . 1 0 `S113 1 . 1 0 `S116 1 . 1 0 `S119 1 . 1 0 `S122 1 . 1 0 `S125 1 . 1 0 `S128 1 . 1 0 `S131 1 . 1 0 `S134 1 . 1 0 `S137 1 . 1 0 `S140 1 . 1 0 `S143 1 . 1 0 `S146 1 . 1 0 `S149 1 . 1 0 `S152 1 . 1 0 `S155 1 . 1 0 `S158 1 . 1 0 ]
+[v _SSP2STATbits SSP2STATbits `VES161  1 e 1 @3866 ]
+"19245
 [v _SSP2CON3 SSP2CON3 `VEuc  1 e 1 @3897 ]
-[s S321 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S319 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -184,19 +191,33 @@
 `uc 1 LATD6 1 0 :1:6 
 `uc 1 LATD7 1 0 :1:7 
 ]
-"24438
-[s S330 . 1 `uc 1 LD0 1 0 :1:0 
+"24442
+[s S328 . 1 `uc 1 LD0 1 0 :1:0 
+]
+[s S330 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
+]
+[s S333 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LD2 1 0 :1:2 
+]
+[s S336 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LD3 1 0 :1:3 
+]
+[s S339 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LD4 1 0 :1:4 
+]
+[s S342 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LD5 1 0 :1:5 
+]
+[s S345 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LD6 1 0 :1:6 
+]
+[s S348 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S339 . 1 `S321 1 . 1 0 `S330 1 . 1 0 ]
-[v _LATDbits LATDbits `VES339  1 e 1 @3980 ]
-[s S400 . 1 `uc 1 TRISC0 1 0 :1:0 
+[u S351 . 1 `S319 1 . 1 0 `S328 1 . 1 0 `S330 1 . 1 0 `S333 1 . 1 0 `S336 1 . 1 0 `S339 1 . 1 0 `S342 1 . 1 0 `S345 1 . 1 0 `S348 1 . 1 0 ]
+[v _LATDbits LATDbits `VES351  1 e 1 @3980 ]
+[s S438 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -205,10 +226,10 @@
 `uc 1 TRISC6 1 0 :1:6 
 `uc 1 TRISC7 1 0 :1:7 
 ]
-"24942
-[u S409 . 1 `S400 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES409  1 e 1 @3988 ]
-[s S379 . 1 `uc 1 TRISD0 1 0 :1:0 
+"24988
+[u S447 . 1 `S438 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES447  1 e 1 @3988 ]
+[s S417 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -217,78 +238,102 @@
 `uc 1 TRISD6 1 0 :1:6 
 `uc 1 TRISD7 1 0 :1:7 
 ]
-"25004
-[u S388 . 1 `S379 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES388  1 e 1 @3989 ]
-"29910
+"25049
+[u S426 . 1 `S417 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES426  1 e 1 @3989 ]
+"29736
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-"4 C:\Users\Guacamole\Documents\LCD\LCD_SPI.X\main.c
+"4 U:\SPI_LCD\LCD_SPI.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "6
-[v main@status status `uc  1 a 1 11 ]
-"27
+[v main@status status `uc  1 a 1 10 ]
+"25
 } 0
-"49 C:\Users\Guacamole\Documents\LCD\LCD_SPI.X\LCD_SPI.c
+"48 U:\SPI_LCD\LCD_SPI.X\LCD_SPI.c
 [v _putStringLCD putStringLCD `(v  1 e 1 0 ]
 {
-"51
-[v putStringLCD@i i `i  1 a 2 9 ]
-"49
-[v putStringLCD@input input `*.32uc  1 p 2 5 ]
-"57
+"50
+[v putStringLCD@i i `i  1 a 2 8 ]
+"48
+[v putStringLCD@input input `*.32Cuc  1 p 2 4 ]
+"56
 } 0
-"58
+"57
 [v _putchLCD putchLCD `(v  1 e 1 0 ]
 {
 [v putchLCD@input input `uc  1 a 1 wreg ]
 [v putchLCD@input input `uc  1 a 1 wreg ]
-"60
-[v putchLCD@input input `uc  1 a 1 4 ]
-"71
+"59
+[v putchLCD@input input `uc  1 a 1 3 ]
+"68
 } 0
-"92
+"78
+[v _moveCursor moveCursor `(v  1 e 1 0 ]
+{
+"80
+[v moveCursor@address address `uc  1 a 1 7 ]
+"78
+[v moveCursor@row row `i  1 p 2 3 ]
+[v moveCursor@col col `i  1 p 2 5 ]
+"87
+} 0
+"69
+[v _fliplr fliplr `(uc  1 e 1 0 ]
+{
+[v fliplr@input input `uc  1 a 1 wreg ]
+[v fliplr@input input `uc  1 a 1 wreg ]
+"72
+[v fliplr@input input `uc  1 a 1 2 ]
+"77
+} 0
+"145
+[v _initialisation_LCD initialisation_LCD `(v  1 e 1 0 ]
+{
+"152
+} 0
+"108
 [v _initialisation_SPI initialisation_SPI `(v  1 e 1 0 ]
 {
-"112
+"128
 } 0
-"114
+"130
 [v _initialisation_PORT initialisation_PORT `(v  1 e 1 0 ]
 {
-"127
+"143
 } 0
-"31
+"30
 [v _displayCtrl displayCtrl `(v  1 e 1 0 ]
 {
 [v displayCtrl@display display `uc  1 a 1 wreg ]
-"33
+"32
 [v displayCtrl@BCD BCD `uc  1 a 1 5 ]
-"31
+"30
 [v displayCtrl@display display `uc  1 a 1 wreg ]
 [v displayCtrl@cursor cursor `uc  1 p 1 2 ]
 [v displayCtrl@blink blink `uc  1 p 1 3 ]
-"33
+"32
 [v displayCtrl@display display `uc  1 a 1 4 ]
-"48
+"47
 } 0
-"19
+"18
 [v _clearDisplay clearDisplay `(v  1 e 1 0 ]
 {
-"29
+"28
 } 0
-"73
+"89
 [v _readBusyFlag readBusyFlag `(uc  1 e 1 0 ]
 {
-"75
+"91
 [v readBusyFlag@retValue retValue `uc  1 a 1 1 ]
-"83
+"99
 } 0
-"12
+"11
 [v _spi_Send_Read spi_Send_Read `(uc  1 e 1 0 ]
 {
 [v spi_Send_Read@byte byte `uc  1 a 1 wreg ]
 [v spi_Send_Read@byte byte `uc  1 a 1 wreg ]
-"14
+"13
 [v spi_Send_Read@byte byte `uc  1 a 1 0 ]
-"17
+"16
 } 0

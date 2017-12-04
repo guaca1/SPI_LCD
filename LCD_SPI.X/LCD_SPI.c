@@ -8,7 +8,6 @@
 
 #include "LCD_SPI.h"
 
-
  unsigned char spi_Send_Read(unsigned char byte)
  {
      SSP2BUF = byte;    
@@ -46,7 +45,7 @@
     spi_Send_Read(0x00);
     SPI_CS = 1;            //CSN high
  }
- void putStringLCD(unsigned char* input)
+ void putStringLCD(const unsigned char* input)
  {
      int i;
     for (i = 0; input[i] != '\0'; i++) 
@@ -57,17 +56,38 @@
  }
  void putchLCD(unsigned char input)
  {
-    input = (input & 0xF0) >> 4 | (input & 0x0F) << 4;
-    input = (input & 0xCC) >> 2 | (input & 0x33) << 2;
-    input = (input & 0xAA) >> 1 | (input & 0x55) << 1;
+     input = fliplr(input); // LCD expects LSB first, but we send MSB first
     
     while(readBusyFlag());
     SPI_CS = 0;            //CSN low
     spi_Send_Read(0xFA); // Send write command
-    spi_Send_Read(input & 0xF0); // Send 0x48 to write "H", note that the receiver expects LSB first, while we send MSB first
+    spi_Send_Read(input & 0xF0); 
     spi_Send_Read(input << 4);
     SPI_CS = 1;            //CSN high
    
+ }
+ char fliplr(char input)
+ {
+     //Flips the char so it becomes LSB first
+    input = (input & 0xF0) >> 4 | (input & 0x0F) << 4;
+    input = (input & 0xCC) >> 2 | (input & 0x33) << 2;
+    input = (input & 0xAA) >> 1 | (input & 0x55) << 1;
+    
+    return input;
+ }
+ void moveCursor(int row, int col)
+ {
+    char address = row * 20 + col;
+    if (row >= 2)
+    {
+        address += 24;
+    }
+    address = fliplr(address);
+    while(readBusyFlag());
+    SPI_CS = 0;
+    spi_Send_Read(0xF8); // Send 5-bit start then 000
+    spi_Send_Read(address & 0xF0); 
+    spi_Send_Read((address << 4) | 0x10); // D7 = 1, for Set DDRAM address command
  }
  
  unsigned char readBusyFlag()
@@ -125,3 +145,12 @@
      __delay_ms(33); //wait 100 ms for the LCD to power itself on properly
      __delay_ms(33); //wait 100 ms for the LCD to power itself on properly
  }
+
+void initialisation_LCD()
+{
+    initialisation_PORT();
+    initialisation_SPI();
+    clearDisplay();
+    displayCtrl(1,1,0);
+    
+}

@@ -17538,17 +17538,21 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 5 "main.c"
+# 38 "LCD_SPI.h"
 unsigned char spi_Send_Read(unsigned char);
 void initialisation_SPI(void);
 void dly(void);
-unsigned char readBusyFlag();
-void putStringLCD(unsigned char*);
+unsigned char readBusyFlag(void);
+void putStringLCD(const unsigned char*);
 void putchLCD(unsigned char);
 void clearDisplay();
 void displayCtrl(char display, char cursor, char blink);
+void initialisation_PORT(void);
+void initialisation_LCD();
+void moveCursor(int row, int col);
+char fliplr(char input);
 
-# 24
+# 4 "main.c"
 void main(void)
 {
 unsigned char status = 0;
@@ -17556,132 +17560,30 @@ unsigned char data[5];
 int i;
 
 
-OSCCON = OSCCON | 0b01110000;
-
-initialisation_SPI();
 
 
+initialisation_LCD();
 
-TRISDbits.TRISD4 = 0;
-TRISDbits.TRISD2 = 0;
-TRISDbits.TRISD3 = 0;
-TRISDbits.TRISD1 = 1;
-TRISCbits.TRISC0 = 0;
-LATDbits.LATD3 = 1;
-__nop();
-_delay((unsigned long)((33)*(8000000/4000.0)));
-_delay((unsigned long)((33)*(8000000/4000.0)));
-_delay((unsigned long)((33)*(8000000/4000.0)));
 
-while(readBusyFlag());
-clearDisplay();
-displayCtrl(1,1,0);
-putStringLCD("Hello world");
+
+
+moveCursor(0, 0);
+putStringLCD("world");
+moveCursor(1, 4);
+putStringLCD("world");
+moveCursor(2, 8);
+putStringLCD("world");
+moveCursor(3, 12);
+putStringLCD("world");
+moveCursor(3, 2);
+putStringLCD("world");
+moveCursor(3, 2);
+putStringLCD("world");
+moveCursor(3, 2);
+putStringLCD("world");
 while (1)
 {
 
 }
 }
 
-
-unsigned char spi_Send_Read(unsigned char byte)
-{
-SSP2BUF = byte;
-while(!SSP2STATbits.BF);
-return SSP2BUF;
-}
-
-void clearDisplay()
-{
-while(readBusyFlag());
-
-LATDbits.LATD3 = 0;
-spi_Send_Read(0xF8);
-spi_Send_Read(0x80);
-spi_Send_Read(0x00);
-LATDbits.LATD3 = 1;
-
-}
-
-void displayCtrl(char display, char cursor, char blink)
-{
-char BCD = blink;
-BCD <<= 1;
-BCD += cursor;
-BCD <<= 1;
-BCD += display;
-BCD <<= 1;
-BCD += 1;
-BCD <<= 4;
-
-while(readBusyFlag());
-LATDbits.LATD3 = 0;
-spi_Send_Read(0xF8);
-spi_Send_Read(BCD);
-spi_Send_Read(0x00);
-LATDbits.LATD3 = 1;
-}
-void putStringLCD(unsigned char* input)
-{
-int i;
-for (i = 0; input[i] != '\0'; i++)
-{
-putchLCD(input[i]);
-}
-
-}
-void putchLCD(unsigned char input)
-{
-input = (input & 0xF0) >> 4 | (input & 0x0F) << 4;
-input = (input & 0xCC) >> 2 | (input & 0x33) << 2;
-input = (input & 0xAA) >> 1 | (input & 0x55) << 1;
-
-while(readBusyFlag());
-LATDbits.LATD3 = 0;
-spi_Send_Read(0xFA);
-spi_Send_Read(input & 0xF0);
-spi_Send_Read(input << 4);
-LATDbits.LATD3 = 1;
-
-}
-
-unsigned char readBusyFlag()
-{
-unsigned char retValue;
-
-LATDbits.LATD3 = 0;
-spi_Send_Read(0xFC);
-retValue = spi_Send_Read(0x00);
-LATDbits.LATD3 = 1;
-_delay((unsigned long)((1)*(8000000/4000000.0)));
-return retValue & 1;
-}
-void dly(void)
-{
-unsigned int i;
-
-for (i = 0; i < 50000; i++)
-;
-}
-
-void initialisation_SPI(void)
-{
-
-
-RPOR24_25 |= 0x04;
-RPOR24_25 &= 0xF4;
-
-RPOR22_23 |= 0x05;
-RPOR22_23 &= 0xF5;
-
-RPINR12_13 |= 0x50;
-RPINR12_13 &= 0x5F;
-
-
-SSP2CON1 &= 0xF1;
-SSP2CON1 |= 0x31;
-SSP2STAT |= 0x80;
-SSP2STAT &= ~0x40;
-SSP2CON3 &= 0x8F;
-
-}
